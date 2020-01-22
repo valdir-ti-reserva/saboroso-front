@@ -1,5 +1,7 @@
 import React from 'react';
 
+import { Title } from './styles';
+
 export default function Main(){
-  return <h1>Página inicial</h1>
+  return <Title>Página inicial</Title>
 }
