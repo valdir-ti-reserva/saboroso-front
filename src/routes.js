@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Router, Switch, Route } from 'react-router-dom';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
 import Main from './pages/Main';
 import Menus from './pages/Menus';
