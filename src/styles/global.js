@@ -258,7 +258,7 @@ h1, h2, h3, h4, h5, h6, figure {
   color: #FBB448 !important;
 } */
 
-#gtco-header {
+/* #gtco-header {
   background: #4d4d4d;
 }
 @media screen and (max-width: 992px) {
@@ -405,7 +405,7 @@ h1, h2, h3, h4, h5, h6, figure {
   background-position: top center;
   background-repeat: no-repeat;
   position: relative;
-}
+} */
 
 .gtco-bg {
   background-position: center center;

@@ -21,16 +21,16 @@ export default function Menu(){
                       <a href="/">Home</a>
                     </li>
                     <li>
-                      <a href="menu">Menu</a>
+                      <a href="/menus">Menu</a>
                     </li>
                     <li>
-                      <a href="services">Serviços</a>
+                      <a href="/services">Serviços</a>
                     </li>
                     <li>
-                      <a href="contact">Contato</a>
+                      <a href="/contacts">Contato</a>
                     </li>
                     <li class="btn-cta">
-                      <a href="reservation">
+                      <a href="/reservations">
                         <span>Reserva</span>
                       </a>
                     </li>
