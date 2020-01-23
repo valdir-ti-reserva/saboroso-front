@@ -1,17 +1,13 @@
 import React from 'react';
-
+import ScrollUpButton from "react-scroll-up-button";
 import styles from './styles.css';
-import Loading from '../components/loading';
+import Loading from '../components/Loading';
 import Background from '../../images/img_1.jpg';
-
-// import { Title } from './styles';
 
 export default function Main(){
   return (
     <>
       <Loading />
-
-      {/* <div class="gtco-loader"></div> */}
 
         <div id="page">
 
@@ -394,11 +390,7 @@ export default function Main(){
 
         </div>
 
-        <div class="gototop js-top">
-          <a href="#" class="js-gotop">
-            <i class="icon-arrow-up"></i>
-          </a>
-        </div>
+        <ScrollUpButton />
 
         {/* <!-- jQuery -->
         <script src="js/jquery.min.js"></script>

@@ -1199,7 +1199,7 @@ form label {
   text-transform: uppercase;
 }
 
-.gototop {
+/* .gototop {
   position: fixed;
   bottom: 20px;
   right: 20px;
@@ -1234,7 +1234,7 @@ form label {
 .gototop a:hover, .gototop a:active, .gototop a:focus {
   text-decoration: none;
   outline: none;
-}
+} */
 
 .gtco-nav-toggle {
   width: 25px;

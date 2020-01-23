@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import img from '../../images/loader.gif';
+import img from '../../../images/loader.gif';
 
 export const Load = styled.div`
   position: fixed;
