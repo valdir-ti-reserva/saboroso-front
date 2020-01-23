@@ -1,5 +1,11 @@
 import React from 'react';
+import Loading from '../components/loading';
 
 export default function Contacts (){
-  return <h2>Contacts</h2>
+  return (
+    <>
+      <Loading />
+      <h2>Contacts</h2>
+    </>
+  );
 }

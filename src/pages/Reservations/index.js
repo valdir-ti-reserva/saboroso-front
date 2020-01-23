@@ -1,5 +1,11 @@
 import React from 'react';
+import Loading from '../components/loading';
 
 export default function Reservations (){
-  return <h2>Reservations</h2>
+  return (
+    <>
+      <Loading />
+      <h2>Reservations</h2>
+    </>
+  );
 }

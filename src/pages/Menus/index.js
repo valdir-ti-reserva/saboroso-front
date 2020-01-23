@@ -1,5 +1,11 @@
 import React from 'react';
+import Loading from '../components/loading';
 
 export default function Menus (){
-  return <h2>Menus</h2>
+  return (
+    <>
+      <Loading />
+      <h2>Menus</h2>
+    </>
+  );
 }

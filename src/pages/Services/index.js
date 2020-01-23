@@ -1,5 +1,11 @@
 import React from 'react';
+import Loading from '../components/loading';
 
 export default function Services (){
-  return <h2>Services</h2>
+  return (
+    <>
+      <Loading />
+      <h2>Services</h2>
+    </>
+  );
 }

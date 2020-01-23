@@ -1,24 +1,4 @@
-import { createGlobalStyle } from 'styled-components';
-
-export default createGlobalStyle`
-
-  * {
-  }
-
-  html, body, #root{
-  }
-
-  body {
-  }
-
-  body, input, button {
-
-  }
-
-  button {
-  }
-
-  /* @font-face {
+/* @font-face {
   font-family: 'icomoon';
   src: url("../fonts/icomoon/icomoon.eot?srf3rx");
   src: url("../fonts/icomoon/icomoon.eot?srf3rx#iefix") format("embedded-opentype"), url("../fonts/icomoon/icomoon.ttf?srf3rx") format("truetype"), url("../fonts/icomoon/icomoon.woff?srf3rx") format("woff"), url("../fonts/icomoon/icomoon.svg?srf3rx#icomoon") format("svg");
@@ -1558,7 +1538,7 @@ form label {
   padding-bottom: 2em !important;
 }
 
-/* .gtco-loader {
+.gtco-loader {
   position: fixed;
   left: 0px;
   top: 0px;
@@ -1566,7 +1546,7 @@ form label {
   height: 100%;
   z-index: 9999;
   background: url('../../images/loader.gif') center no-repeat #fff;
-} */
+}
 
 .js .animate-box {
   opacity: 0;
@@ -1981,6 +1961,3 @@ form label {
 }
 
 /*# sourceMappingURL=style.css.map */
-
-
-`;
