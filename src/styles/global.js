@@ -113,7 +113,7 @@ h1, h2, h3, h4, h5, h6, figure {
   padding-right: 15px;
 }
 
-.gtco-nav {
+/* .gtco-nav {
   position: absolute;
   top: 0;
   left: 0;
@@ -256,7 +256,7 @@ h1, h2, h3, h4, h5, h6, figure {
 }
 .gtco-nav ul li.active > a {
   color: #FBB448 !important;
-}
+} */
 
 #gtco-header {
   background: #4d4d4d;

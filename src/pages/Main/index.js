@@ -1,8 +1,9 @@
 import React from 'react';
-import ScrollUpButton from "react-scroll-up-button";
 import styles from './styles.css';
 import Loading from '../components/Loading';
-import Background from '../../images/img_1.jpg';
+import Menu from '../components/Menu';
+import Background from '../../images/img_bg_1.jpg';
+import ScrollUpButton from "react-scroll-up-button";
 
 export default function Main(){
   return (
@@ -11,7 +12,8 @@ export default function Main(){
 
         <div id="page">
 
-          <nav class="gtco-nav" role="navigation">
+          <Menu />
+          {/* <nav class="gtco-nav" role="navigation">
             <div class="gtco-container">
 
               <div class="row">
@@ -46,7 +48,7 @@ export default function Main(){
               </div>
 
             </div>
-          </nav>
+          </nav> */}
 
           <header id="gtco-header" class="gtco-cover gtco-cover-md" role="banner" style={{ backgroundImage: `url(${Background})` }}  data-stellar-background-ratio="0.5">
             <div class="overlay"></div>
