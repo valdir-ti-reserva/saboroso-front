@@ -5,6 +5,14 @@ import img2 from '../../../images/img_2.jpg';
 import img3 from '../../../images/img_3.jpg';
 import { FaPlus } from 'react-icons/fa';
 
+const iconStyle = {
+  fontSize:30,
+  color:'#fff',
+  position:'absolute',
+  top:'45%',
+  left:'45%'
+}
+
 export default function Section(){
   return(
     <>
@@ -23,7 +31,7 @@ export default function Section(){
                   <a href={img1} class="fh5co-card-item image-popup">
                     <figure>
                       <div class="overlay">
-                        <FaPlus />
+                        <FaPlus style={iconStyle}/>
                       </div>
                       <img src={img1} alt="Image" class="img-responsive" />
                     </figure>
@@ -40,7 +48,7 @@ export default function Section(){
                   <a href={img2} class="fh5co-card-item image-popup">
                     <figure>
                       <div class="overlay">
-                        <FaPlus />
+                        <FaPlus style={iconStyle}/>
                       </div>
                       <img src={img2} alt="Image" class="img-responsive" />
                     </figure>
@@ -59,7 +67,7 @@ export default function Section(){
                   <a href={img3} class="fh5co-card-item image-popup">
                     <figure>
                       <div class="overlay">
-                        <FaPlus />
+                        <FaPlus style={iconStyle}/>
                       </div>
                       <img src={img3} alt="Image" class="img-responsive" />
                     </figure>
