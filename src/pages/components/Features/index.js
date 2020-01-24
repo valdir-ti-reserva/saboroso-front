@@ -1,4 +1,10 @@
 import React from 'react';
+import {FaCloud, FaTruck, FaSmile} from 'react-icons/fa';
+
+const iconStyle = {
+  fontSize:48,
+  marginTop:18
+}
 
 export default function Features(){
   return (
@@ -15,7 +21,7 @@ export default function Features(){
                 <div class="col-md-4 col-sm-6">
                   <div class="feature-center animate-box" data-animate-effect="fadeIn">
                     <span class="icon">
-                      <i class="ti-face-smile"></i>
+                      <FaSmile style={iconStyle}/>
                     </span>
                     <h3>Pessoas Felizes</h3>
                     <p>Mussum Ipsum, cacilds vidis litro abertis. Si num tem leite então bota uma pinga aí cumpadi!</p>
@@ -24,7 +30,7 @@ export default function Features(){
                 <div class="col-md-4 col-sm-6">
                   <div class="feature-center animate-box" data-animate-effect="fadeIn">
                     <span class="icon">
-                      <i class="ti-thought"></i>
+                      <FaCloud style={iconStyle}/>
                     </span>
                     <h3>Culinária Criativa</h3>
                     <p>Mussum Ipsum, cacilds vidis litro abertis. Si num tem leite então bota uma pinga aí cumpadi!</p>
@@ -33,7 +39,7 @@ export default function Features(){
                 <div class="col-md-4 col-sm-6">
                   <div class="feature-center animate-box" data-animate-effect="fadeIn">
                     <span class="icon">
-                      <i class="ti-truck"></i>
+                      <FaTruck style={iconStyle}/>
                     </span>
                     <h3>Delivery</h3>
                     <p>Mussum Ipsum, cacilds vidis litro abertis. Si num tem leite então bota uma pinga aí cumpadi!</p>
