@@ -33,7 +33,7 @@ export default function Section(){
                       <div class="overlay">
                         <FaPlus style={iconStyle}/>
                       </div>
-                      <img src={img1} alt="Image" class="img-responsive" />
+                      <img src={img1} alt="img1" class="img-responsive" />
                     </figure>
                     <div class="fh5co-text">
                       <h2>Bife de Costela com molho</h2>
@@ -50,7 +50,7 @@ export default function Section(){
                       <div class="overlay">
                         <FaPlus style={iconStyle}/>
                       </div>
-                      <img src={img2} alt="Image" class="img-responsive" />
+                      <img src={img2} alt="img2" class="img-responsive" />
                     </figure>
                     <div class="fh5co-text">
                       <h2>Hambúrguer com Fritas</h2>
@@ -69,7 +69,7 @@ export default function Section(){
                       <div class="overlay">
                         <FaPlus style={iconStyle}/>
                       </div>
-                      <img src={img3} alt="Image" class="img-responsive" />
+                      <img src={img3} alt="img3" class="img-responsive" />
                     </figure>
                     <div class="fh5co-text">
                       <h2>Chilli com Carne</h2>

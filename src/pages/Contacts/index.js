@@ -4,6 +4,7 @@ import React from 'react';
 import Loading from '../components/Loading';
 import Menu from '../components/Menu';
 import Footer from '../components/Footer';
+import MakeBy from '../components/MakeBy';
 import ScrollUpButton from "react-scroll-up-button";
 
 // Itens
@@ -23,10 +24,9 @@ export default function Contacts (){
 
                 <div class="row row-mt-15em">
                   <div class="col-md-12 mt-text animate-box" data-animate-effect="fadeInUp">
-                    <span class="intro-text-small">Feito por
-                      <a href="https://www.hcode.com.br" target="_blank">Hcode.com.br</a>
-                    </span>
-                    <h1 class="cursive-font">Diga um oi!</h1>
+
+                    <MakeBy msg={'Diga um oi!'}/>
+
                   </div>
 
                 </div>

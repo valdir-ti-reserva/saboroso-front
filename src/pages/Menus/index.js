@@ -4,6 +4,7 @@ import React from 'react';
 import Loading from '../components/Loading';
 import Menu from '../components/Menu';
 import Footer from '../components/Footer';
+import MakeBy from '../components/MakeBy';
 import ScrollUpButton from "react-scroll-up-button";
 
 // Itens
@@ -24,10 +25,9 @@ export default function Menus (){
 
                 <div class="row row-mt-15em">
                   <div class="col-md-12 mt-text animate-box" data-animate-effect="fadeInUp">
-                    <span class="intro-text-small">Feito por
-                      <a href="https://www.hcode.com.br" target="_blank">Hcode.com.br</a>
-                    </span>
-                    <h1 class="cursive-font">Saboreie nosso menu!</h1>
+
+                    <MakeBy msg={'Saboreie o nosso menu!'}/>
+
                   </div>
 
                 </div>
@@ -55,7 +55,7 @@ export default function Menus (){
                     <div class="overlay">
                       <i class="ti-plus"></i>
                     </div>
-                    <img src="images/img_1.jpg" alt="Image" class="img-responsive" />
+                    <img src="images/img_1.jpg"  alt="img1" class="img-responsive" />
                   </figure>
                   <div class="fh5co-text">
                     <h2>Bife de Costela com molho</h2>
@@ -72,7 +72,7 @@ export default function Menus (){
                     <div class="overlay">
                       <i class="ti-plus"></i>
                     </div>
-                    <img src="images/img_2.jpg" alt="Image" class="img-responsive" />
+                    <img src="images/img_2.jpg" alt="img2" class="img-responsive" />
                   </figure>
                   <div class="fh5co-text">
                     <h2>Hambúrguer com Fritas</h2>
@@ -91,7 +91,7 @@ export default function Menus (){
                     <div class="overlay">
                       <i class="ti-plus"></i>
                     </div>
-                    <img src="images/img_5.jpg" alt="Image" class="img-responsive" />
+                    <img src="images/img_5.jpg" alt="img3" class="img-responsive" />
                   </figure>
                   <div class="fh5co-text">
                     <h2>Chilli com Carne</h2>

@@ -17,15 +17,15 @@ export default function Footer(){
                     <h3>Entrar em Contato</h3>
                     <ul class="gtco-quick-contact">
                       <li>
-                        <a href="#">
+                        <a href="#!">
                           <i class="icon-phone"></i> +1 234 567 890</a>
                       </li>
                       <li>
-                        <a href="#">
+                        <a href="#!">
                           <i class="icon-mail2"></i> contato@hcode.com.br</a>
                       </li>
                       <li>
-                        <a href="#">
+                        <a href="#!">
                           <i class="icon-chat"></i> Chat</a>
                       </li>
                     </ul>
@@ -61,7 +61,7 @@ export default function Footer(){
                   <p>
                     <small class="block">&copy; 2020.&nbsp;Direitos Reservados.</small>
                     <small class="block">Desenvolvido por
-                      <a href="https://valdir.herokuapp.com/" target="_blank">&nbsp;Valdir Silva</a>
+                      <a href="https://valdir.herokuapp.com/" rel="noopener noreferrer" target="_blank">&nbsp;Valdir Silva</a>
                     </small>
                   </p>
                 </div>

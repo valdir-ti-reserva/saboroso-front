@@ -2,9 +2,10 @@ import React from 'react';
 
 // Components
 import Loading from '../components/Loading';
-import ScrollUpButton from "react-scroll-up-button";
 import Menu from '../components/Menu';
+import MakeBy from '../components/MakeBy';
 import Footer from '../components/Footer';
+import ScrollUpButton from "react-scroll-up-button";
 
 // Itens
 import Background from '../../images/img_bg_1.jpg';
@@ -24,10 +25,9 @@ export default function Services (){
 
                 <div class="row row-mt-15em">
                   <div class="col-md-12 mt-text animate-box" data-animate-effect="fadeInUp">
-                    <span class="intro-text-small">Feito por
-                      <a href="https://www.hcode.com.br" target="_blank">Hcode.com.br</a>
-                    </span>
-                    <h1 class="cursive-font">É um prazer poder servir!</h1>
+
+                    <MakeBy msg={'É um prazer poder servir!'}/>
+
                   </div>
 
                 </div>
