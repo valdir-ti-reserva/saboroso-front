@@ -1,5 +1,7 @@
 import React from 'react';
 
+import { FaLinkedinIn, FaTwitter, FaFacebook, FaYoutube } from 'react-icons/fa';
+
 import Background from '../../../images/img_bg_1.jpg';
 
 export default function Footer(){
@@ -33,22 +35,22 @@ export default function Footer(){
                     <ul class="gtco-social-icons">
                       <li>
                         <a href="https://twitter.com/hcodebr">
-                          <i class="icon-twitter"></i>
+                          <FaTwitter />
                         </a>
                       </li>
                       <li>
                         <a href="https://www.facebook.com/hcodebr">
-                          <i class="icon-facebook"></i>
+                          <FaFacebook />
                         </a>
                       </li>
                       <li>
-                        <a href="https://www.linkedin.com/company/grupo-hcode/">
-                          <i class="icon-linkedin"></i>
+                        <a href="https://www.linkedin.com/in/valdirti/">
+                          <FaLinkedinIn />
                         </a>
                       </li>
                       <li>
                         <a href="https://www.youtube.com/channel/UCjWENuSH2gX55-y7QSZiWxA">
-                          <i class="icon-youtube"></i>
+                          <FaYoutube />
                         </a>
                       </li>
                     </ul>
@@ -57,9 +59,9 @@ export default function Footer(){
 
                 <div class="col-md-12 text-center copyright">
                   <p>
-                    <small class="block">&copy; 2018 Hcode. Todos os Direitos Reservados.</small>
+                    <small class="block">&copy; 2020.&nbsp;Direitos Reservados.</small>
                     <small class="block">Desenvolvido por
-                      <a href="https://www.hcode.com.br" target="_blank">Hcode.com.br</a>
+                      <a href="https://valdir.herokuapp.com/" target="_blank">&nbsp;Valdir Silva</a>
                     </small>
                   </p>
                 </div>
