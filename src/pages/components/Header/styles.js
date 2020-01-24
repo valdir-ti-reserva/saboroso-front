@@ -1,9 +1,11 @@
 import styled from 'styled-components';
 
 export const Header = styled.header`
+
   #gtco-header {
     background: #4d4d4d;
   }
+
   @media screen and (max-width: 992px) {
     #gtco-header.gtco-cover {
       height: inherit !important;
@@ -34,7 +36,7 @@ export const Header = styled.header`
     font-size: 14px;
     text-transform: uppercase;
     color: rgba(255, 255, 255, 0.5);
-    letter-spacing: .15em;
+    letter-spacing: 0.22em;
     display: block;
     margin-bottom: 10px;
   }
@@ -149,4 +151,110 @@ export const Header = styled.header`
     background-repeat: no-repeat;
     position: relative;
   }
+
+  &{
+    height: 900px;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    position: relative;
+    float: left;
+    width: 100%;
+  }
+
+
+  & a {
+    color: #FBB448;
+  }
+  & a:hover {
+    color: white;
+  }
+  & .overlay {
+    z-index: 1;
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.5);
+  }
+
+  /* svg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    color: #fff;
+    width: 30px;
+    height: 30px;
+  } */
+  & > .gtco-container {
+    position: relative;
+    z-index: 10;
+  }
+  @media screen and (max-width: 768px) {
+    & {
+      height: 600px;
+    }
+  }
+  & .display-t,
+  & .display-tc {
+    height: 900px;
+    display: table;
+    width: 100%;
+  }
+  @media screen and (max-width: 768px) {
+    & .display-t,
+    & .display-tc {
+      height: 600px;
+    }
+  }
+  &.gtco-cover-sm {
+    height: 600px;
+  }
+  @media screen and (max-width: 768px) {
+    &.gtco-cover-sm {
+      height: 400px;
+    }
+  }
+  &.gtco-cover-sm .display-t,
+  &.gtco-cover-sm .display-tc {
+    height: 600px;
+    display: table;
+    width: 100%;
+  }
+  @media screen and (max-width: 768px) {
+    &.gtco-cover-sm .display-t,
+    &.gtco-cover-sm .display-tc {
+      height: 400px;
+    }
+  }
+  &.gtco-cover-xs {
+    height: 500px;
+  }
+  @media screen and (max-width: 768px) {
+    .gtco-cover.gtco-cover-xs {
+      height: inherit !important;
+      padding: 3em 0;
+    }
+  }
+  &.gtco-cover-xs .display-t,
+  &.gtco-cover-xs .display-tc {
+    height: 500px;
+    display: table;
+    width: 100%;
+  }
+  @media screen and (max-width: 768px) {
+    &.gtco-cover-xs .display-t,
+    &.gtco-cover-xs .display-tc {
+      padding: 3em 0;
+      height: inherit !important;
+    }
+  }
+
+  & p {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 20px !important;
+    font-weight: 300;
+  }
+
 `;

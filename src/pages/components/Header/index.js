@@ -5,7 +5,7 @@ import Background from '../../../images/img_bg_1.jpg';
 export default function(){
   return (
     <>
-      <Header id="gtco-header" class="gtco-cover gtco-cover-md" role="banner" style={{ backgroundImage: `url(${Background})` }}  data-stellar-background-ratio="0.5">
+      <Header id="gtco-header" class="gtco-cover gtco-cover-md" role="banner" style={{ backgroundImage: `url(${Background})`, backgroundPosition: '50% 0%' }}  data-stellar-background-ratio="0.5">
             <div class="overlay"></div>
             <div class="gtco-container">
               <div class="row">
@@ -14,7 +14,7 @@ export default function(){
 
                   <div class="row row-mt-15em">
                     <div class="col-md-7 mt-text animate-box" data-animate-effect="fadeInUp">
-                      <span class="intro-text-small">Feito por
+                      <span class="intro-text-small">Feito por&nbsp;
                         <a href="https://www.hcode.com.br" target="_blank">Hcode.com.br</a>
                       </span>
                       <h1 class="cursive-font">Restaurante Saboroso!</h1>

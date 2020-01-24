@@ -475,7 +475,7 @@ h1, h2, h3, h4, h5, h6, figure {
   transform: scale(1.2);
 }
 
-.gtco-cover {
+/* .gtco-cover {
   height: 900px;
   background-size: cover;
   background-position: center center;
@@ -566,7 +566,7 @@ h1, h2, h3, h4, h5, h6, figure {
   color: rgba(255, 255, 255, 0.9);
   font-size: 20px !important;
   font-weight: 300;
-}
+} */
 
 .gtco-staff {
   text-align: center;
