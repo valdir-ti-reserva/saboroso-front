@@ -6,11 +6,11 @@ import Menu from '../components/Menu';
 import MakeBy from '../components/MakeBy';
 import Features from '../components/Features';
 import Footer from '../components/Footer';
+import Subscribe from '../components/Subscribe';
 import ScrollUpButton from 'react-scroll-up-button';
 
 // Itens
 import Background from '../../images/img_bg_1.jpg';
-import Subscribe from '../components/Subscribe';
 
 export default function Services() {
   return (
