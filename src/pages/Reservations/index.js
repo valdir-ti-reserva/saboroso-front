@@ -4,7 +4,7 @@ import React from 'react';
 import Loading from '../components/Loading';
 import Menu from '../components/Menu';
 import Footer from '../components/Footer';
-import ContactForm from '../components/ContactForm';
+import ReservationForm from '../components/ReservationForm';
 import ContactInfo from '../components/ContactInfo';
 import MakeBy from '../components/MakeBy';
 import ScrollUpButton from 'react-scroll-up-button';
@@ -48,7 +48,7 @@ export default function Reservations() {
               <div class="col-md-6 animate-box">
                 <h3>Reserva de mesa</h3>
 
-                <ContactForm />
+                <ReservationForm />
               </div>
 
               <ContactInfo />

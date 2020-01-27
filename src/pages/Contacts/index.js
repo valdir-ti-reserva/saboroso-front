@@ -7,6 +7,7 @@ import Footer from '../components/Footer';
 import MakeBy from '../components/MakeBy';
 import ScrollUpButton from 'react-scroll-up-button';
 import ContactInfo from '../components/ContactInfo';
+import ContactForm from '../components/ContactForm';
 
 // Itens
 import Background from '../../images/img_bg_3.jpg';
@@ -45,58 +46,7 @@ export default function Contacts() {
           <div class="row">
             <div class="col-md-12">
               <div class="col-md-6 animate-box">
-                <h3>Entre em Contato</h3>
-                <form action="#">
-                  <div class="row form-group">
-                    <div class="col-md-12">
-                      <label class="sr-only" for="name">
-                        Nome
-                      </label>
-                      <input
-                        type="text"
-                        id="name"
-                        class="form-control"
-                        placeholder="Seu nome"
-                      />
-                    </div>
-                  </div>
-
-                  <div class="row form-group">
-                    <div class="col-md-12">
-                      <label class="sr-only" for="email">
-                        E-mail
-                      </label>
-                      <input
-                        type="text"
-                        id="email"
-                        class="form-control"
-                        placeholder="Seu endereço de e-mail"
-                      />
-                    </div>
-                  </div>
-                  <div class="row form-group">
-                    <div class="col-md-12">
-                      <label class="sr-only" for="message">
-                        Mensagem
-                      </label>
-                      <textarea
-                        name="message"
-                        id="message"
-                        cols="30"
-                        rows="10"
-                        class="form-control"
-                        placeholder="Escreve alguma coisa"
-                      ></textarea>
-                    </div>
-                  </div>
-                  <div class="form-group">
-                    <input
-                      type="submit"
-                      value="Enviar"
-                      class="btn btn-primary"
-                    />
-                  </div>
-                </form>
+                <ContactForm />
               </div>
 
               <ContactInfo />

@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 // import { HeaderStyle } from './styles';
 import Background from '../../../images/img_bg_1.jpg';
 import MakeBy from '../../components/MakeBy';
-import ContactForm from '../ContactForm';
+import ReservationForm from '../ReservationForm';
 
 export default class Header extends Component {
   render() {
@@ -42,7 +42,7 @@ export default class Header extends Component {
                           >
                             <h3 class="cursive-font">Reserva de mesa</h3>
 
-                            <ContactForm />
+                            <ReservationForm />
                           </div>
                         </div>
                       </div>

@@ -3,73 +3,53 @@ import React from 'react';
 export default function ContactForm() {
   return (
     <>
+      <h3>Entre em Contato</h3>
+
       <form action="#">
         <div class="row form-group">
           <div class="col-md-12">
-            <label for="inputName">Nome</label>
+            <label class="sr-only" for="name">
+              Nome
+            </label>
             <input
               type="text"
-              id="inputName"
-              name="name"
+              id="name"
               class="form-control"
-            />
-          </div>
-        </div>
-        <div class="row form-group">
-          <div class="col-md-12">
-            <label for="inputEmail">E-mail</label>
-            <input
-              type="email"
-              id="inputEmail"
-              name="email"
-              class="form-control"
-            />
-          </div>
-        </div>
-        <div class="row form-group">
-          <div class="col-md-12">
-            <label for="inputPeople">Pessoas</label>
-            <select id="inputPeople" name="people" class="form-control">
-              <option value=""> -- selecione -- </option>
-              <option value="1">1</option>
-              <option value="2">2</option>
-              <option value="3">3</option>
-              <option value="4">4</option>
-              <option value="5">5+</option>
-            </select>
-          </div>
-        </div>
-        <div class="row form-group">
-          <div class="col-md-12">
-            <label for="inputDate">Data</label>
-            <input
-              type="text"
-              id="inputDate"
-              name="date"
-              class="form-control"
-            />
-          </div>
-        </div>
-        <div class="row form-group">
-          <div class="col-md-12">
-            <label for="inputTime">Hora</label>
-            <input
-              type="text"
-              id="inputTime"
-              name="time"
-              class="form-control"
+              placeholder="Seu nome"
             />
           </div>
         </div>
 
         <div class="row form-group">
           <div class="col-md-12">
+            <label class="sr-only" for="email">
+              E-mail
+            </label>
             <input
-              type="submit"
-              class="btn btn-primary btn-block"
-              value="Reservar Agora"
+              type="text"
+              id="email"
+              class="form-control"
+              placeholder="Seu endereço de e-mail"
             />
           </div>
+        </div>
+        <div class="row form-group">
+          <div class="col-md-12">
+            <label class="sr-only" for="message">
+              Mensagem
+            </label>
+            <textarea
+              name="message"
+              id="message"
+              cols="30"
+              rows="10"
+              class="form-control"
+              placeholder="Escreve alguma coisa"
+            ></textarea>
+          </div>
+        </div>
+        <div class="form-group">
+          <input type="submit" value="Enviar" class="btn btn-primary" />
         </div>
       </form>
     </>
