@@ -21,11 +21,11 @@ export default function Reservations() {
 
       <Header msg={msg} bg={bg} />
 
-      <div class="gtco-section" style={{ padding: 14 }}>
-        <div class="gtco-container">
-          <div class="row">
-            <div class="col-md-12">
-              <div class="col-md-6 animate-box">
+      <div className="gtco-section" style={{ padding: 14 }}>
+        <div className="gtco-container">
+          <div className="row">
+            <div className="col-md-12">
+              <div className="col-md-6 animate-box">
                 <h3>Reserva de mesa</h3>
 
                 <ReservationForm />

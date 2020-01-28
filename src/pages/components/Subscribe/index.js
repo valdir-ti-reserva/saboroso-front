@@ -6,15 +6,15 @@ export default function Subscribe() {
   return (
     <>
       <div id="gtco-subscribe">
-        <div class="gtco-container">
-          <div class="row animate-box">
-            <div class="col-md-8 col-md-offset-2 text-center gtco-heading">
-              <h2 class="cursive-font">Se inscrever</h2>
+        <div className="gtco-container">
+          <div className="row animate-box">
+            <div className="col-md-8 col-md-offset-2 text-center gtco-heading">
+              <h2 className="cursive-font">Se inscrever</h2>
               <p>Receba as novidades do nosso restaurante</p>
             </div>
           </div>
-          <div class="row animate-box">
-            <div class="col-md-8 col-md-offset-2">
+          <div className="row animate-box">
+            <div className="col-md-8 col-md-offset-2">
               <SubscribeForm />
             </div>
           </div>

@@ -6,7 +6,7 @@ export default class MakeBy extends Component {
     return (
       <>
         <FadeIn>
-          <span class="intro-text-small">
+          <span className="intro-text-small">
             Feito por
             <a
               href="https://valdir.herokuapp.com/"
@@ -16,7 +16,7 @@ export default class MakeBy extends Component {
               &nbsp;Valdir Silva
             </a>
           </span>
-          <h1 class="cursive-font">{this.props.msg}</h1>
+          <h1 className="cursive-font">{this.props.msg}</h1>
         </FadeIn>
       </>
     );

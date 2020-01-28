@@ -20,30 +20,29 @@ export default class Header extends Component {
             }}
             data-stellar-background-ratio="0.5"
           >
-            <div class="overlay"></div>
-            <div class="gtco-container">
-              <div class="row">
-                <div class="col-md-12 col-md-offset-0 text-left">
-                  <div class="row row-mt-15em">
+            <div className="overlay"></div>
+            <div className="gtco-container">
+              <div className="row">
+                <div className="col-md-12 col-md-offset-0 text-left">
+                  <div className="row row-mt-15em">
                     <div
-                      class="col-md-7 mt-text animate-box"
+                      className="col-md-7 mt-text animate-box"
                       data-animate-effect="fadeInUp"
                     >
                       <MakeBy msg={this.props.msg} />
                     </div>
                     <div
-                      class="col-md-4 col-md-push-1 animate-box"
+                      className="col-md-4 col-md-push-1 animate-box"
                       data-animate-effect="fadeInRight"
                     >
-                      <div class="form-wrap">
-                        <div class="tab">
-                          <div class="tab-content">
+                      <div className="form-wrap">
+                        <div className="tab">
+                          <div className="tab-content">
                             <div
-                              class="tab-content-inner active"
+                              className="tab-content-inner active"
                               data-content="signup"
                             >
-                              <h3 class="cursive-font">Reserva de mesa</h3>
-
+                              <h3 className="cursive-font">Reserva de mesa</h3>
                               <ReservationForm />
                             </div>
                           </div>
