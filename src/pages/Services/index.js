@@ -1,11 +1,12 @@
 import React from 'react';
 
 // Components
-import Loading from '../components/Loading';
 import Menu from '../components/Menu';
 import MakeBy from '../components/MakeBy';
-import Features from '../components/Features';
 import Footer from '../components/Footer';
+import Cover2 from '../components/Cover2';
+import Loading from '../components/Loading';
+import Features from '../components/Features';
 import Subscribe from '../components/Subscribe';
 import ScrollUpButton from 'react-scroll-up-button';
 
@@ -44,24 +45,7 @@ export default function Services() {
 
       <Features />
 
-      <div
-        class="gtco-cover gtco-cover-sm"
-        style={{ backgroundImage: `url(${Background})` }}
-        data-stellar-background-ratio="0.5"
-      >
-        <div class="overlay"></div>
-        <div class="gtco-container text-center">
-          <div class="display-t">
-            <div class="display-tc">
-              <h1>
-                &ldquo; Delegadis gente finis, bibendum egestas augue arcu ut
-                est. Cevadis im ampola pa arma uma pindureta!&rdquo;
-              </h1>
-              <p>&mdash; Mussum, Humorista.</p>
-            </div>
-          </div>
-        </div>
-      </div>
+      <Cover2 />
 
       <Subscribe />
       <Footer />
