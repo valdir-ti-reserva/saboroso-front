@@ -12,6 +12,10 @@ import Cover2 from '../components/Cover2';
 import Footer from '../components/Footer';
 import ScrollUpButton from 'react-scroll-up-button';
 
+//Props
+import bg from '../../images/img_bg_1.jpg';
+const msg = 'Restaurante Saboroso!';
+
 export default function Main() {
   return (
     <>
@@ -19,7 +23,7 @@ export default function Main() {
 
       <div id="page">
         <Menu />
-        <Header />
+        <Header msg={msg} bg={bg} />
         <Section />
         <Features />
         <Cover2 />
