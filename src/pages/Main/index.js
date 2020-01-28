@@ -12,8 +12,6 @@ import Cover2 from '../components/Cover2';
 import Footer from '../components/Footer';
 import ScrollUpButton from 'react-scroll-up-button';
 
-import Background from '../../images/img_bg_1.jpg';
-
 export default function Main() {
   return (
     <>
