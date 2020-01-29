@@ -4,7 +4,6 @@ import React from 'react';
 import Menu from '../components/Menu';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
-// import MakeBy from '../components/MakeBy';
 import Cover2 from '../components/Cover2';
 import Section from '../components/Section';
 import Loading from '../components/Loading';

@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 // import { HeaderStyle } from './styles';
-// import Background from '../../../images/img_bg_1.jpg';
 import MakeBy from '../../components/MakeBy';
-import ReservationForm from '../ReservationForm';
+import FormWrap from '../../components/FormWrap';
 const url = window.location.pathname;
 
 export default class Header extends Component {
@@ -35,19 +34,7 @@ export default class Header extends Component {
                       className="col-md-4 col-md-push-1 animate-box"
                       data-animate-effect="fadeInRight"
                     >
-                      <div className="form-wrap">
-                        <div className="tab">
-                          <div className="tab-content">
-                            <div
-                              className="tab-content-inner active"
-                              data-content="signup"
-                            >
-                              <h3 className="cursive-font">Reserva de mesa</h3>
-                              <ReservationForm />
-                            </div>
-                          </div>
-                        </div>
-                      </div>
+                      <FormWrap />
                     </div>
                   </div>
                 </div>
