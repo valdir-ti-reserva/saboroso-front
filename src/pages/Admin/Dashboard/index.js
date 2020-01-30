@@ -1,14 +1,15 @@
 import React, { Component } from 'react';
 import { Content, Row, Col, Box, Button } from 'adminlte-2-react';
 
-export default class Users extends Component {
+export default class Dashboard extends Component {
   state = {};
+
   render() {
     return (
       <Content
-        title="Usuários"
+        title="Dashboard"
         subTitle="Projeto Saboroso"
-        // browserTitle="Projeto Saboroso React"
+        browserTitle="Admin Projeto Saboroso - React"
       >
         <Row>
           <Col xs={6}>

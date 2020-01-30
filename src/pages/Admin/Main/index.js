@@ -1,52 +1,33 @@
 import React, { Component } from 'react';
-import AdminLTE, {
-  Sidebar,
-  Content,
-  Row,
-  Col,
-  Box,
-  Button,
-} from 'adminlte-2-react';
+import AdminLTE, { Sidebar } from 'adminlte-2-react';
 
+import Dashboard from '../Dashboard';
 import Users from '../Users';
+import Emails from '../Emails';
+import Menus from '../Menus';
+import Contacts from '../Contacts';
+import Reservations from '../Reservations';
 
 const { Item } = Sidebar;
 
-class Dashboard extends Component {
-  state = {};
-
-  render() {
-    return (
-      <Content
-        title="Hello World"
-        subTitle="Getting started with adminlte-2-react"
-        browserTitle="Hello World"
-      >
-        <Row>
-          <Col xs={6}>
-            <Box
-              title="My first box"
-              type="primary"
-              closable
-              collapsable
-              footer={<Button type="danger" text="Danger Button" />}
-            >
-              Hello World
-            </Box>
-          </Col>
-          <Col xs={6}>
-            <Box title="Another box">Content goes here</Box>
-          </Col>
-        </Row>
-      </Content>
-    );
-  }
-}
-
 class App extends Component {
   sidebar = [
-    <Item key="hello" text="Hello" to="/admin" />,
-    <Item key="users" text="Users" to="/admin/users" />,
+    <Item key="dashboard" text="Dashboard" to="/admin" icon="fa-chart-line" />,
+    <Item key="users" text="Usuários" to="/admin/users" icon="fa-users" />,
+    <Item
+      key="contacts"
+      text="Contatos"
+      to="/admin/contacts"
+      icon="fa-phone-volume"
+    />,
+    <Item key="emails" text="E-mails" to="/admin/emails" icon="fa-envelope" />,
+    <Item key="menus" text="Menus" to="/admin/menus" icon="fa-book-open" />,
+    <Item
+      key="reservations"
+      text="Reservas"
+      to="/admin/reservations"
+      icon="fa-calendar-alt"
+    />,
   ];
 
   render() {
@@ -57,8 +38,12 @@ class App extends Component {
         theme="purple"
         sidebar={this.sidebar}
       >
-        <Dashboard path="/admin" />
         <Users path="/admin/users" />
+        <Contacts path="/admin/contacts" />
+        <Emails path="/admin/emails" />
+        <Menus path="/admin/menus" />
+        <Reservations path="/admin/reservations" />
+        <Dashboard path="/admin" />
       </AdminLTE>
     );
   }
