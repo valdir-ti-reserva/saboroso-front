@@ -6,8 +6,9 @@ import Menus from './pages/Menus';
 import Contacts from './pages/Contacts';
 import Services from './pages/Services';
 import Reservations from './pages/Reservations';
+import MainAdmin from './pages/Admin/Main';
 
-export default function Routes(){
+export default function Routes() {
   return (
     <BrowserRouter>
       <Switch>
@@ -16,7 +17,8 @@ export default function Routes(){
         <Route path="/services" component={Services} />
         <Route path="/contacts" component={Contacts} />
         <Route path="/reservations" component={Reservations} />
+        <Route path="/admin" component={MainAdmin} />
       </Switch>
     </BrowserRouter>
-  )
+  );
 }

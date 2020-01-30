@@ -29,9 +29,12 @@ export default function Menu() {
                 <li>
                   <a href="/contacts">Contato</a>
                 </li>
+                <li>
+                  <a href="/reservations">Reserva</a>
+                </li>
                 <li className="btn-cta">
-                  <a href="/reservations">
-                    <span>Reserva</span>
+                  <a href="/admin">
+                    <span>Admin</span>
                   </a>
                 </li>
               </ul>
