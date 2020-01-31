@@ -21,20 +21,20 @@ class App extends Component {
       status="Online"
       statusType="green"
     />,
-    <Item key="dashboard" text="Dashboard" to="/admin" icon="fa-chart-line" />,
-    <Item key="users" text="Usuários" to="/admin/users" icon="fa-users" />,
+    <Item key="dashboard" text="Dashboard" to="/admin2" icon="fa-chart-line" />,
+    <Item key="users" text="Usuários" to="/admin2/users" icon="fa-users" />,
     <Item
       key="contacts"
       text="Contatos"
-      to="/admin/contacts"
+      to="/admin2/contacts"
       icon="fa-phone-volume"
     />,
-    <Item key="emails" text="E-mails" to="/admin/emails" icon="fa-envelope" />,
-    <Item key="menus" text="Menus" to="/admin/menus" icon="fa-book-open" />,
+    <Item key="emails" text="E-mails" to="/admin2/emails" icon="fa-envelope" />,
+    <Item key="menus" text="Menus" to="/admin2/menus" icon="fa-book-open" />,
     <Item
       key="reservations"
       text="Reservas"
-      to="/admin/reservations"
+      to="/admin2/reservations"
       icon="fa-calendar-alt"
     />,
   ];
@@ -64,12 +64,12 @@ class App extends Component {
         sidebar={this.sidebar}
         navbar={this.navbar}
       >
-        <Users path="/admin/users" />
-        <Contacts path="/admin/contacts" />
-        <Emails path="/admin/emails" />
-        <Menus path="/admin/menus" />
-        <Reservations path="/admin/reservations" />
-        <Dashboard path="/admin" />
+        <Users path="/admin2/users" />
+        <Contacts path="/admin2/contacts" />
+        <Emails path="/admin2/emails" />
+        <Menus path="/admin2/menus" />
+        <Reservations path="/admin2/reservations" />
+        <Dashboard path="/admin2" />
       </AdminLTE>
     );
   }
