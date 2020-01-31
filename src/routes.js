@@ -17,7 +17,7 @@ export default function Routes() {
         <Route path="/services" component={Services} />
         <Route path="/contacts" component={Contacts} />
         <Route path="/reservations" component={Reservations} />
-        <Route path="/admin" component={MainAdmin} />
+        <Route path="/admin2" component={MainAdmin} />
       </Switch>
     </BrowserRouter>
   );
