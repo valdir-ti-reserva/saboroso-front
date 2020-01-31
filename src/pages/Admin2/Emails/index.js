@@ -7,7 +7,8 @@ export default class Emails extends Component {
       <Content
         title="Emails"
         subTitle="Projeto Saboroso"
-        browserTitle="Admin Projeto Saboroso - React"
+        homeRoute="/admin2"
+        // browserTitle="Admin Projeto Saboroso - React"
       >
         <Row>
           <Col xs={6}>

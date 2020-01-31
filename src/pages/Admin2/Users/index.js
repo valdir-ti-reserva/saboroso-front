@@ -10,6 +10,7 @@ export default class Users extends Component {
       <Content
         title="Usuários"
         subTitle="Projeto Saboroso"
+        homeRoute="/admin2"
         // browserTitle="Projeto Saboroso React"
       >
         <Row>

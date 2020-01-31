@@ -10,6 +10,7 @@ export default class Dashboard extends Component {
         title="Dashboard"
         subTitle="Projeto Saboroso"
         browserTitle="Admin Projeto Saboroso - React"
+        homeRoute="/admin2"
       >
         <Row>
           <Col xs={6}>

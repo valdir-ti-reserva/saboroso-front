@@ -12,6 +12,7 @@ export const Table = styled.div`
       font-size: 22px;
       font-style: italic;
       width: 50%;
+      padding-bottom: 5px;
     }
 
     .btn-adicionar {

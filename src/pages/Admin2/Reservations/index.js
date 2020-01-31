@@ -7,7 +7,8 @@ export default class Reservations extends Component {
       <Content
         title="Reservas"
         subTitle="Projeto Saboroso"
-        browserTitle="Admin Projeto Saboroso - React"
+        homeRoute="/admin2"
+        // browserTitle="Admin Projeto Saboroso - React"
       >
         <Row>
           <Col xs={6}>
