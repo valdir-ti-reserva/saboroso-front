@@ -1,15 +1,9 @@
 import React, { Component } from 'react';
-import { Content, Row, Col, SimpleTable } from 'adminlte-2-react';
+import { Content, Row, Col } from 'adminlte-2-react';
+import TableUsers from '../components/TableUsers';
 
 export default class Users extends Component {
   state = {};
-  dados = [
-    { id: '1', name: 'Valdir' },
-    { id: '2', name: 'Julia' },
-    { id: '3', name: 'Lila' },
-  ];
-  columns = ['id', 'name'];
-  columnOptions = [{ title: 'teste' }];
 
   render() {
     return (
@@ -20,14 +14,7 @@ export default class Users extends Component {
       >
         <Row>
           <Col xs={12}>
-            <SimpleTable
-              data={this.dados}
-              columns={this.columns}
-              border
-              responsive
-              hover
-              ColumnOptions={this.ColumnOptions}
-            />
+            <TableUsers />
           </Col>
         </Row>
       </Content>

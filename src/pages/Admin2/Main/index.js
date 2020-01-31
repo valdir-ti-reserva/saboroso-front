@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
-import AdminLTE, { Sidebar, Navbar } from 'adminlte-2-react';
+import AdminLTE, { Sidebar, Navbar, Footer } from 'adminlte-2-react';
+
+import Header from './styles';
 
 import Dashboard from '../Dashboard';
 import Users from '../Users';
@@ -70,6 +72,8 @@ class App extends Component {
         <Menus path="/admin2/menus" />
         <Reservations path="/admin2/reservations" />
         <Dashboard path="/admin2" />
+
+        <Footer />
       </AdminLTE>
     );
   }
