@@ -33,8 +33,13 @@ export default function Menu() {
                   <a href="/reservations">Reserva</a>
                 </li>
                 <li className="btn-cta">
+                  <a href="/admin2">
+                    <span>AdminLTE</span>
+                  </a>
+                </li>
+                <li className="btn-cta">
                   <a href="/admin">
-                    <span>Admin</span>
+                    <span>AdminMDB</span>
                   </a>
                 </li>
               </ul>

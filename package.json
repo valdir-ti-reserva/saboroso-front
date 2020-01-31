@@ -10,6 +10,7 @@
     "bootstrap": "3",
     "eslint-loader": "^3.0.3",
     "jquery": "^3.4.1",
+    "mdbreact": "^4.25.0",
     "react": "^16.12.0",
     "react-animate-on-scroll": "^2.1.5",
     "react-animation": "^1.2.2",

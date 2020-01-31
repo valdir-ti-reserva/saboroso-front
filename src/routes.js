@@ -6,7 +6,8 @@ import Menus from './pages/Menus';
 import Contacts from './pages/Contacts';
 import Services from './pages/Services';
 import Reservations from './pages/Reservations';
-import MainAdmin from './pages/Admin/Main';
+import MainAdmin from './pages/Admin2/Main';
+import AdminMBD from './pages/Admin/Main';
 
 export default function Routes() {
   return (
@@ -18,6 +19,7 @@ export default function Routes() {
         <Route path="/contacts" component={Contacts} />
         <Route path="/reservations" component={Reservations} />
         <Route path="/admin2" component={MainAdmin} />
+        <Route path="/admin" component={AdminMBD} />
       </Switch>
     </BrowserRouter>
   );
