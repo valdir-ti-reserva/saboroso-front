@@ -41,11 +41,18 @@ export const Table = styled.div`
       padding: 0;
       padding-top: 2px;
     }
-    .btn-excluir:hover {
+    .btn-excluir:hover,
+    .btn-excluir:active,
+    .btn-excluir:focus {
       color: #fff;
       background-color: #7159c1 !important;
       border: none;
     }
+    /* .btn-excluir:active {
+      color: #fff;
+      background-color: #7159c1 !important;
+      border: none;
+    } */
     .btn-editar {
       border-radius: 50%;
       width: 35px;
@@ -58,7 +65,9 @@ export const Table = styled.div`
       padding: 0;
       padding-top: 2px;
     }
-    .btn-editar:hover {
+    .btn-editar:hover,
+    .btn-editar:active,
+    .btn-editar:focus {
       color: #fff;
     }
   }
