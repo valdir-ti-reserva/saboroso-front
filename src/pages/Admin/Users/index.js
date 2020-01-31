@@ -1,8 +1,16 @@
 import React, { Component } from 'react';
-import { Content, Row, Col, Box, Button } from 'adminlte-2-react';
+import { Content, Row, Col, SimpleTable } from 'adminlte-2-react';
 
 export default class Users extends Component {
   state = {};
+  dados = [
+    { id: '1', name: 'Valdir' },
+    { id: '2', name: 'Julia' },
+    { id: '3', name: 'Lila' },
+  ];
+  columns = ['id', 'name'];
+  columnOptions = [{ title: 'teste' }];
+
   render() {
     return (
       <Content
@@ -11,19 +19,15 @@ export default class Users extends Component {
         // browserTitle="Projeto Saboroso React"
       >
         <Row>
-          <Col xs={6}>
-            <Box
-              title="My first box"
-              type="primary"
-              closable
-              collapsable
-              footer={<Button type="danger" text="Danger Button" />}
-            >
-              Projeto Saboroso
-            </Box>
-          </Col>
-          <Col xs={6}>
-            <Box title="Another box">Content goes here</Box>
+          <Col xs={12}>
+            <SimpleTable
+              data={this.dados}
+              columns={this.columns}
+              border
+              responsive
+              hover
+              ColumnOptions={this.ColumnOptions}
+            />
           </Col>
         </Row>
       </Content>
