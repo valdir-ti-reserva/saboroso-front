@@ -34,8 +34,8 @@ export default createGlobalStyle`
 body {
   font-family: "Lato", Arial, sans-serif;
   font-weight: 400;
-  font-size: 16px;
-  line-height: 1.7;
+  /* font-size: 16px;
+  line-height: 1.7; */
   color: #777;
   background: #fff;
 }
