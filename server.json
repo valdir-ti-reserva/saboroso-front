@@ -1,0 +1,22 @@
+{
+  "clients": [{
+      "id": 1,
+      "nome": "Valdir",
+      "sobrenome": "Silva"
+    },
+    {
+      "id": 2,
+      "nome": "Julia",
+      "sobrenome": "Felix"
+    },
+    {
+      "id": 3,
+      "nome": "Lila",
+      "sobrenome": "Felix"
+    }, {
+      "id": 4,
+      "nome": "Valdir",
+      "sobrenome": "Souza da Silva"
+    }
+  ]
+}

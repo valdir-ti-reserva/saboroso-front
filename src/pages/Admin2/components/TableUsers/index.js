@@ -1,10 +1,22 @@
 import React, { Component } from 'react';
 import { Table } from './styles';
 import { FaTrash, FaPlus, FaPen } from 'react-icons/fa';
+import api from '../../../../services/api';
 
 export default class TableUsers extends Component {
-  state = {};
+  state = {
+    clients: [],
+  };
+
+  async componentDidMount() {
+    const response = await api.get('clients');
+
+    this.setState({ clients: response.data });
+  }
+
   render() {
+    const { clients } = this.state;
+
     return (
       <>
         <Table className="table-responsive">
@@ -25,175 +37,21 @@ export default class TableUsers extends Component {
               </tr>
             </thead>
             <tbody>
-              <tr>
-                <td>1</td>
-                <td>Maria Anders</td>
-                <td>Germany</td>
-                <td>
-                  <button className="btn-editar btn-warning">
-                    <FaPen />
-                  </button>
-                  <button className="btn-excluir btn-danger">
-                    <FaTrash />
-                  </button>
-                </td>
-              </tr>
-              <tr>
-                <td>2</td>
-                <td>Francisco Chang</td>
-                <td>Mexico</td>
-                <td>
-                  <button className="btn-editar btn-warning">
-                    <FaPen />
-                  </button>
-                  <button className="btn-excluir btn-danger">
-                    <FaTrash />
-                  </button>
-                </td>
-              </tr>
-              <tr>
-                <td>3</td>
-                <td>Roland Mendel</td>
-                <td>Austria</td>
-                <td>
-                  <button className="btn-editar btn-warning">
-                    <FaPen />
-                  </button>
-                  <button className="btn-excluir btn-danger">
-                    <FaTrash />
-                  </button>
-                </td>
-              </tr>
-              <tr>
-                <td>4</td>
-                <td>Helen Bennett</td>
-                <td>UK</td>
-                <td>
-                  <button className="btn-editar btn-warning">
-                    <FaPen />
-                  </button>
-                  <button className="btn-excluir btn-danger">
-                    <FaTrash />
-                  </button>
-                </td>
-              </tr>
-              <tr>
-                <td>5</td>
-                <td>Yoshi Tannamuri</td>
-                <td>Canada</td>
-                <td>
-                  <button className="btn-editar btn-warning">
-                    <FaPen />
-                  </button>
-                  <button className="btn-excluir btn-danger">
-                    <FaTrash />
-                  </button>
-                </td>
-              </tr>
-              <tr>
-                <td>6</td>
-                <td>Giovanni Rovelli</td>
-                <td>Italy</td>
-                <td>
-                  <button className="btn-editar btn-warning">
-                    <FaPen />
-                  </button>
-                  <button className="btn-excluir btn-danger">
-                    <FaTrash />
-                  </button>
-                </td>
-              </tr>
-              <tr>
-                <td>6</td>
-                <td>Giovanni Rovelli</td>
-                <td>Italy</td>
-                <td>
-                  <button className="btn-editar btn-warning">
-                    <FaPen />
-                  </button>
-                  <button className="btn-excluir btn-danger">
-                    <FaTrash />
-                  </button>
-                </td>
-              </tr>
-              <tr>
-                <td>6</td>
-                <td>Giovanni Rovelli</td>
-                <td>Italy</td>
-                <td>
-                  <button className="btn-editar btn-warning">
-                    <FaPen />
-                  </button>
-                  <button className="btn-excluir btn-danger">
-                    <FaTrash />
-                  </button>
-                </td>
-              </tr>
-              <tr>
-                <td>6</td>
-                <td>Giovanni Rovelli</td>
-                <td>Italy</td>
-                <td>
-                  <button className="btn-editar btn-warning">
-                    <FaPen />
-                  </button>
-                  <button className="btn-excluir btn-danger">
-                    <FaTrash />
-                  </button>
-                </td>
-              </tr>
-              <tr>
-                <td>6</td>
-                <td>Giovanni Rovelli</td>
-                <td>Italy</td>
-                <td>
-                  <button className="btn-editar btn-warning">
-                    <FaPen />
-                  </button>
-                  <button className="btn-excluir btn-danger">
-                    <FaTrash />
-                  </button>
-                </td>
-              </tr>
-              <tr>
-                <td>6</td>
-                <td>Giovanni Rovelli</td>
-                <td>Italy</td>
-                <td>
-                  <button className="btn-editar btn-warning">
-                    <FaPen />
-                  </button>
-                  <button className="btn-excluir btn-danger">
-                    <FaTrash />
-                  </button>
-                </td>
-              </tr>
-              <tr>
-                <td>6</td>
-                <td>Giovanni Rovelli</td>
-                <td>Italy</td>
-                <td>
-                  <button className="btn-editar btn-warning">
-                    <FaPen />
-                  </button>
-                  <button className="btn-excluir btn-danger">
-                    <FaTrash />
-                  </button>
-                </td>
-              </tr>
-              <tr>
-                <td>6</td>
-                <td>Giovanni Rovelli</td>
-                <td>Italy</td>
-                <td>
-                  <button className="btn-editar btn-warning">
-                    <FaPen />
-                  </button>
-                  <button className="btn-excluir btn-danger">
-                    <FaTrash />
-                  </button>
-                </td>
-              </tr>
+              {clients.map(client => (
+                <tr key={client.id}>
+                  <td>{client.id}</td>
+                  <td>{client.nome}</td>
+                  <td>{client.sobrenome}</td>
+                  <td>
+                    <button className="btn-editar btn-warning">
+                      <FaPen />
+                    </button>
+                    <button className="btn-excluir btn-danger">
+                      <FaTrash />
+                    </button>
+                  </td>
+                </tr>
+              ))}
             </tbody>
           </table>
         </Table>
