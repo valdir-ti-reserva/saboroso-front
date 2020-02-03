@@ -9,7 +9,7 @@ export default class TableUsers extends Component {
   };
 
   async componentDidMount() {
-    const response = await api.get('clients');
+    const response = await api.get('users');
 
     this.setState({ clients: response.data });
   }
