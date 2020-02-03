@@ -4,13 +4,13 @@ import { Table } from '../../../../styles/tables';
 import { FaTrash, FaPlus, FaPen } from 'react-icons/fa';
 import api from '../../../../services/api';
 
-export default class TableUsers extends Component {
+export default class TableEmails extends Component {
   state = {
     items: [],
   };
 
   async componentDidMount() {
-    const response = await api.get('users');
+    const response = await api.get('emails');
 
     this.setState({ items: response.data });
   }
@@ -32,17 +32,15 @@ export default class TableUsers extends Component {
             <thead>
               <tr>
                 <th>#</th>
-                <th>NOME</th>
-                <th>SOBRENOME</th>
-                <th width={200}>Ações</th>
+                <th>EMAIL</th>
+                <th width={200}>AÇÕES</th>
               </tr>
             </thead>
             <tbody>
               {items.map(item => (
                 <tr key={item.id}>
                   <td>{item.id}</td>
-                  <td>{item.nome}</td>
-                  <td>{item.sobrenome}</td>
+                  <td>{item.email}</td>
                   <td>
                     <button className="btn-editar btn-warning">
                       <FaPen />

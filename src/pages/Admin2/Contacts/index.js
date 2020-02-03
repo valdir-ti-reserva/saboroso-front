@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import { Content, Row, Col } from 'adminlte-2-react';
+import TableContacts from '../components/TableContacts';
 
 export default class Contacts extends Component {
+  state = {};
   render() {
     return (
       <Content
@@ -11,8 +13,8 @@ export default class Contacts extends Component {
         // browserTitle="Admin Projeto Saboroso - React"
       >
         <Row>
-          <Col xs={6}>
-            <h2>Component Contacts</h2>
+          <Col xs={12}>
+            <TableContacts title={'Listagem dos contatos'} />
           </Col>
         </Row>
       </Content>

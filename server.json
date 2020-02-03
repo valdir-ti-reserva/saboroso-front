@@ -44,19 +44,19 @@
   "menus": [{
     "id": 1,
     "title": "Hot Roll",
-    "decription": "Promoção de Hot Roll",
+    "description": "Promoção de Hot Roll",
     "price": "25,00",
     "photo": "https://www.bonde.com.br/img/bondenews/2018/03/img_2457.jpg"
   }, {
     "id": 2,
     "title": "Sashimi",
-    "decription": "Delicioso Sashimi",
+    "description": "Delicioso Sashimi",
     "price": "31,00",
     "photo": "https://img.cybercook.com.br/imagens/receitas/751/sashimi-de-salmao-623x350.jpg"
   }, {
     "id": 3,
     "title": "Temaki Grelhado",
-    "decription": "Nov Temaki Grelhado",
+    "description": "Nov Temaki Grelhado",
     "price": "19,90",
     "photo": "https://www.saboresajinomoto.com.br/uploads/images/recipes/temaki-de-salmao.jpg"
   }],

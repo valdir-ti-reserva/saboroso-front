@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Content, Row, Col } from 'adminlte-2-react';
+import TableEmails from '../components/TableEmails';
 
 export default class Emails extends Component {
   render() {
@@ -11,8 +12,8 @@ export default class Emails extends Component {
         // browserTitle="Admin Projeto Saboroso - React"
       >
         <Row>
-          <Col xs={6}>
-            <h2>Component Emails</h2>
+          <Col xs={12}>
+            <TableEmails title={'Listagem dos emails'} />
           </Col>
         </Row>
       </Content>

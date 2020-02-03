@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Content, Row, Col } from 'adminlte-2-react';
+import TableMenus from '../components/TableMenus';
 
 export default class Menus extends Component {
   render() {
@@ -11,8 +12,8 @@ export default class Menus extends Component {
         // browserTitle="Admin Projeto Saboroso - React"
       >
         <Row>
-          <Col xs={6}>
-            <h2>Component Menus</h2>
+          <Col xs={12}>
+            <TableMenus title={'Listagem dos menus'} />
           </Col>
         </Row>
       </Content>
