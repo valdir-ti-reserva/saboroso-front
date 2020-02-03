@@ -15,7 +15,7 @@ export default class Users extends Component {
       >
         <Row>
           <Col xs={12}>
-            <TableUsers title={'Listagem de usuários'} />
+            <TableUsers title={'Listagem de Usuários'} />
           </Col>
         </Row>
       </Content>

@@ -14,7 +14,7 @@ export default class Contacts extends Component {
       >
         <Row>
           <Col xs={12}>
-            <TableContacts title={'Listagem dos contatos'} />
+            <TableContacts title={'Listagem dos Contatos'} />
           </Col>
         </Row>
       </Content>

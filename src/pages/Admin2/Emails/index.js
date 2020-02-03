@@ -13,7 +13,7 @@ export default class Emails extends Component {
       >
         <Row>
           <Col xs={12}>
-            <TableEmails title={'Listagem dos emails'} />
+            <TableEmails title={'Listagem dos Emails'} />
           </Col>
         </Row>
       </Content>

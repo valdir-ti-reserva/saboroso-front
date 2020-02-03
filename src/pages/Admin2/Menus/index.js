@@ -13,7 +13,7 @@ export default class Menus extends Component {
       >
         <Row>
           <Col xs={12}>
-            <TableMenus title={'Listagem dos menus'} />
+            <TableMenus title={'Listagem dos Menus'} />
           </Col>
         </Row>
       </Content>
