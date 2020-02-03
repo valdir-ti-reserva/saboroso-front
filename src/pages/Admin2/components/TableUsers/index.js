@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 // import { Table } from './styles';
+import { confirmAlert } from 'react-confirm-alert';
+import 'react-confirm-alert/src/react-confirm-alert.css';
 import { Table } from '../../../../styles/tables';
 import { FaTrash, FaPlus, FaPen } from 'react-icons/fa';
 import api from '../../../../services/api';
@@ -11,8 +13,37 @@ export default class TableUsers extends Component {
 
   async componentDidMount() {
     const response = await api.get('users');
-
     this.setState({ items: response.data });
+  }
+
+  async delete(id) {
+    const response = await api.delete('users/' + id);
+
+    if (response.statusText === 'OK') {
+      const items = this.state.items.filter(item => item.id !== id);
+      this.setState({ items: items });
+    }
+  }
+
+  submit = () => {
+    confirmAlert({
+      title: 'Confirmar o envio',
+      message: 'Você tem certeza que deseja excluir?',
+      buttons: [
+        {
+          label: 'Sim',
+          onClick: () => console.log(this),
+        },
+        {
+          label: 'Não',
+          onClick: () => console.log(this),
+        },
+      ],
+    });
+  };
+
+  _handleDelete(id) {
+    this.delete(id);
   }
 
   render() {
@@ -47,7 +78,11 @@ export default class TableUsers extends Component {
                     <button className="btn-editar btn-warning">
                       <FaPen />
                     </button>
-                    <button className="btn-excluir btn-danger">
+                    <button
+                      className="btn-excluir btn-danger"
+                      onClick={this.submit}
+                      // onClick={this._handleDelete.bind(this, item.id)}
+                    >
                       <FaTrash />
                     </button>
                   </td>
