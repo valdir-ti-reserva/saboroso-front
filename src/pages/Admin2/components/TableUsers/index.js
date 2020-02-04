@@ -90,7 +90,6 @@ export default class TableUsers extends Component {
                     </button>
                     <button
                       className="btn-excluir btn-danger"
-                      value={item.id}
                       onClick={this.handleDelete.bind(this, item.id)}
                     >
                       <FaTrash />
