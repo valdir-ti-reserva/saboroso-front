@@ -1,23 +1,63 @@
 import React, { Component } from 'react';
 // import { Table } from './styles';
+import { confirmAlert } from 'react-confirm-alert';
 import { Table } from '../../../../styles/tables';
 import { FaTrash, FaPlus, FaPen } from 'react-icons/fa';
 import api from '../../../../services/api';
 
 export default class TableContacts extends Component {
-  state = {
-    items: [],
-  };
+  constructor(props) {
+    super(props);
+    this.state = {
+      items: [],
+      render: false,
+    };
+  }
 
   async componentDidMount() {
     const response = await api.get('contacts');
-    console.table(response.data);
-    this.setState({ items: response.data });
+    setTimeout(
+      function() {
+        this.setState({ items: response.data });
+      }.bind(this),
+      100
+    );
+  }
+
+  async delete(id) {
+    const response = await api.delete('contacts/' + id);
+    if (response.statusText === 'OK') {
+      const items = this.state.items.filter(item => item.id !== id);
+      setTimeout(
+        function() {
+          this.setState({ items: items, render: true });
+        }.bind(this),
+        750
+      );
+    }
+  }
+
+  handleDelete(id, e) {
+    e.preventDefault();
+
+    confirmAlert({
+      title: 'Excluir Contato',
+      message: 'Você tem certeza que deseja excluir?',
+      buttons: [
+        {
+          label: 'Sim',
+          onClick: () => this.delete(id),
+        },
+        {
+          label: 'Não',
+          onClick: () => console.log('Não excluir!'),
+        },
+      ],
+    });
   }
 
   render() {
     const { items } = this.state;
-
     return (
       <>
         <Table className="table-responsive">
@@ -49,7 +89,11 @@ export default class TableContacts extends Component {
                     <button className="btn-editar btn-warning">
                       <FaPen />
                     </button>
-                    <button className="btn-excluir btn-danger">
+                    <button
+                      className="btn-excluir btn-danger"
+                      value={item.id}
+                      onClick={this.handleDelete.bind(this, item.id)}
+                    >
                       <FaTrash />
                     </button>
                   </td>
