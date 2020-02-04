@@ -1,5 +1,6 @@
 {
-  "users": [{
+  "users": [
+    {
       "id": 1,
       "nome": "Valdir",
       "sobrenome": "Silva"
@@ -25,7 +26,8 @@
       "sobrenome": "de Souza"
     }
   ],
-  "contacts": [{
+  "contacts": [
+    {
       "id": 1,
       "name": "Valdir Silva",
       "email": "val@mail.com",
@@ -61,7 +63,8 @@
       "register": "2019-12-19 00:00:00"
     }
   ],
-  "emails": [{
+  "emails": [
+    {
       "id": 1,
       "email": "val@mail.com",
       "register": "2019-12-19 00:00:00"
@@ -85,9 +88,18 @@
       "id": 5,
       "email": "julia@mail.com",
       "register": "2019-12-19 00:00:00"
+    },
+    {
+      "email": "val@mail.com",
+      "id": 6
+    },
+    {
+      "email": "teste@mail.com",
+      "id": 7
     }
   ],
-  "menus": [{
+  "menus": [
+    {
       "id": 1,
       "title": "Hot Roll",
       "description": "Promoção de Hot Roll",
@@ -123,7 +135,8 @@
       "photo": "https://img.cybercook.com.br/imagens/receitas/751/sashimi-de-salmao-623x350.jpg"
     }
   ],
-  "reservations": [{
+  "reservations": [
+    {
       "id": 1,
       "name": "Dr Valdir",
       "email": "val@mail.com",
