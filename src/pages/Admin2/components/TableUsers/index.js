@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-// import { Table } from './styles';
 import { confirmAlert } from 'react-confirm-alert';
 import 'react-confirm-alert/src/react-confirm-alert.css';
 import { Table } from '../../../../styles/tables';
@@ -7,48 +6,59 @@ import { FaTrash, FaPlus, FaPen } from 'react-icons/fa';
 import api from '../../../../services/api';
 
 export default class TableUsers extends Component {
-  state = {
-    items: [],
-  };
+  constructor(props) {
+    super(props);
+    this.state = {
+      items: [],
+      render: false,
+    };
+  }
 
   async componentDidMount() {
     const response = await api.get('users');
-    this.setState({ items: response.data });
+
+    setTimeout(
+      function() {
+        this.setState({ items: response.data, render: true });
+      }.bind(this),
+      100
+    );
   }
 
   async delete(id) {
     const response = await api.delete('users/' + id);
-
     if (response.statusText === 'OK') {
       const items = this.state.items.filter(item => item.id !== id);
-      this.setState({ items: items });
+      setTimeout(
+        function() {
+          this.setState({ items: items, render: true });
+        }.bind(this),
+        750
+      );
     }
   }
 
-  submit = () => {
+  handleDelete(id, e) {
+    e.preventDefault();
+
     confirmAlert({
-      title: 'Confirmar o envio',
+      title: 'Excluir usuário',
       message: 'Você tem certeza que deseja excluir?',
       buttons: [
         {
           label: 'Sim',
-          onClick: () => console.log(this),
+          onClick: () => this.delete(id),
         },
         {
           label: 'Não',
-          onClick: () => console.log(this),
+          onClick: () => console.log('Não excluir!'),
         },
       ],
     });
-  };
-
-  _handleDelete(id) {
-    this.delete(id);
   }
 
   render() {
     const { items } = this.state;
-
     return (
       <>
         <Table className="table-responsive">
@@ -80,8 +90,8 @@ export default class TableUsers extends Component {
                     </button>
                     <button
                       className="btn-excluir btn-danger"
-                      onClick={this.submit}
-                      // onClick={this._handleDelete.bind(this, item.id)}
+                      value={item.id}
+                      onClick={this.handleDelete.bind(this, item.id)}
                     >
                       <FaTrash />
                     </button>
