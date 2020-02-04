@@ -1,18 +1,60 @@
 import React, { Component } from 'react';
 // import { Table } from './styles';
+import { confirmAlert } from 'react-confirm-alert';
 import { Table } from '../../../../styles/tables';
 import { FaTrash, FaPlus, FaPen } from 'react-icons/fa';
 import api from '../../../../services/api';
 
 export default class TableMenus extends Component {
-  state = {
-    items: [],
-  };
+  constructor(props) {
+    super(props);
+    this.state = {
+      items: [],
+      render: false,
+    };
+  }
 
   async componentDidMount() {
     const response = await api.get('menus');
+    setTimeout(
+      function() {
+        this.setState({ items: response.data, render: true });
+      }.bind(this),
+      100
+    );
+  }
 
-    this.setState({ items: response.data });
+  async delete(id) {
+    const response = await api.delete('menus/' + id);
+
+    if (response.statusText === 'OK') {
+      const items = this.state.items.filter(item => item.id !== id);
+      setTimeout(
+        function() {
+          this.setState({ items: items, render: true });
+        }.bind(this),
+        750
+      );
+    }
+  }
+
+  handleDelete(id, e) {
+    e.preventDefault();
+
+    confirmAlert({
+      title: 'Excluir menu',
+      message: 'Você tem certeza que deseja excluir?',
+      buttons: [
+        {
+          label: 'Sim',
+          onClick: () => this.delete(id),
+        },
+        {
+          label: 'Não',
+          onClick: () => console.log('Não excluir!'),
+        },
+      ],
+    });
   }
 
   render() {
@@ -53,7 +95,10 @@ export default class TableMenus extends Component {
                     <button className="btn-editar btn-warning">
                       <FaPen />
                     </button>
-                    <button className="btn-excluir btn-danger">
+                    <button
+                      className="btn-excluir btn-danger"
+                      onClick={this.handleDelete.bind(this, item.id)}
+                    >
                       <FaTrash />
                     </button>
                   </td>
