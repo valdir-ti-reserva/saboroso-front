@@ -63,15 +63,15 @@ export default class TableContacts extends Component {
         <Table className="table-responsive">
           <div className="topo-table">
             <h2>{this.props.title}</h2>
-            <button className="btn-adicionar">
+            {/* <button className="btn-adicionar">
               <FaPlus />
-            </button>
+            </button> */}
           </div>
 
           <table className="table table-bordered table-striped table-hover">
             <thead>
               <tr>
-                <th>#</th>
+                <th width={25}>#</th>
                 <th>NOME</th>
                 <th>EMAIL</th>
                 <th>MENSAGEM</th>

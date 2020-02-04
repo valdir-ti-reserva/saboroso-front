@@ -1,18 +1,59 @@
 import React, { Component } from 'react';
 // import { Table } from './styles';
+import { confirmAlert } from 'react-confirm-alert';
 import { Table } from '../../../../styles/tables';
 import { FaTrash, FaPlus, FaPen } from 'react-icons/fa';
 import api from '../../../../services/api';
 
 export default class TableReservations extends Component {
-  state = {
-    items: [],
-  };
+  constructor(props) {
+    super(props);
+    this.state = {
+      items: [],
+      render: false,
+    };
+  }
 
   async componentDidMount() {
     const response = await api.get('reservations');
+    setTimeout(
+      function() {
+        this.setState({ items: response.data, render: true });
+      }.bind(this),
+      100
+    );
+  }
 
-    this.setState({ items: response.data });
+  async delete(id) {
+    const response = await api.delete('reservations/' + id);
+    if (response.statusText === 'OK') {
+      const items = this.state.items.filter(item => item.id !== id);
+      setTimeout(
+        function() {
+          this.setState({ items: items, render: true });
+        }.bind(this),
+        750
+      );
+    }
+  }
+
+  handleDelete(id, e) {
+    e.preventDefault();
+
+    confirmAlert({
+      title: 'Excluir Reserva',
+      message: 'Você tem certeza que deseja excluir?',
+      buttons: [
+        {
+          label: 'Sim',
+          onClick: () => this.delete(id),
+        },
+        {
+          label: 'Não',
+          onClick: () => console.log('Não excluir!'),
+        },
+      ],
+    });
   }
 
   render() {
@@ -23,15 +64,15 @@ export default class TableReservations extends Component {
         <Table className="table-responsive">
           <div className="topo-table">
             <h2>{this.props.title}</h2>
-            <button className="btn-adicionar">
+            {/* <button className="btn-adicionar">
               <FaPlus />
-            </button>
+            </button> */}
           </div>
 
           <table className="table table-bordered table-striped table-hover">
             <thead>
               <tr>
-                <th>#</th>
+                <th width={25}>#</th>
                 <th>NOME</th>
                 <th>EMAIL</th>
                 <th>PESSOAS</th>
@@ -53,7 +94,10 @@ export default class TableReservations extends Component {
                     <button className="btn-editar btn-warning">
                       <FaPen />
                     </button>
-                    <button className="btn-excluir btn-danger">
+                    <button
+                      className="btn-excluir btn-danger"
+                      onClick={this.handleDelete.bind(this, item.id)}
+                    >
                       <FaTrash />
                     </button>
                   </td>

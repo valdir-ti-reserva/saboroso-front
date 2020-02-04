@@ -72,7 +72,7 @@ export default class TableUsers extends Component {
           <table className="table table-bordered table-striped table-hover">
             <thead>
               <tr>
-                <th>#</th>
+                <th width={25}>#</th>
                 <th>NOME</th>
                 <th>SOBRENOME</th>
                 <th width={200}>Ações</th>
