@@ -64,7 +64,10 @@ class App extends Component {
         <Reservations path="/admin2/reservations" />
         <Dashboard path="/admin2" />
 
-        <Footer children="Teste" includeVersionInfo={true} />
+        <Footer
+          children="&copy; Restaurante Saboroso - 2020"
+          includeVersionInfo={false}
+        />
       </AdminLTE>
     );
   }
