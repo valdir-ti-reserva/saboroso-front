@@ -1,10 +1,6 @@
 import React, { Component } from 'react';
 import api from '../../../services/api';
 import { formatPrice } from '../../../util/format';
-
-import img1 from '../../../images/img_1.jpg';
-import img2 from '../../../images/img_2.jpg';
-import img3 from '../../../images/img_3.jpg';
 import { FaPlus } from 'react-icons/fa';
 
 const iconStyle = {

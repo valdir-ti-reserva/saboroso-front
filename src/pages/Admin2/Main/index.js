@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import AdminLTE, { Sidebar, Navbar, Footer } from 'adminlte-2-react';
 
-import Header from './styles';
+// import Header from './styles';
 
 import Dashboard from '../Dashboard';
 import Users from '../Users';
@@ -11,7 +11,7 @@ import Contacts from '../Contacts';
 import Reservations from '../Reservations';
 
 const { Item, UserPanel } = Sidebar;
-const { Entry, Core, NotificationItem } = Navbar;
+const { NotificationItem } = Navbar;
 
 class App extends Component {
   state = {};
