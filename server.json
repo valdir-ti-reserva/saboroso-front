@@ -1,33 +1,51 @@
 {
-  "users": [
-    {
+  "users": [{
       "id": 1,
-      "nome": "Valdir",
-      "sobrenome": "Silva"
+      "nome": "Valdir Silva",
+      "password": "698dc19d489c4e4db73e28a713eab07b",
+      "profile": "admin",
+      "email": "teste@mail.com",
+      "cpf": "29363839869",
+      "status": "active"
     },
     {
       "id": 2,
-      "nome": "Julia",
-      "sobrenome": "Felix"
+      "nome": "Julia Felix",
+      "password": "698dc19d489c4e4db73e28a713eab07b",
+      "profile": "user",
+      "email": "julia@mail.com",
+      "cpf": "29363839800",
+      "status": "active"
     },
     {
       "id": 3,
-      "nome": "Lila",
-      "sobrenome": "Felix"
+      "nome": "Lila Felix",
+      "password": "698dc19d489c4e4db73e28a713eab07b",
+      "profile": "admin",
+      "email": "lila@mail.com",
+      "cpf": "28863839869",
+      "status": "active"
     },
     {
       "id": 4,
-      "nome": "Valdir",
-      "sobrenome": "Souza"
+      "nome": "Valdir Souza",
+      "password": "698dc19d489c4e4db73e28a713eab07b",
+      "profile": "user",
+      "email": "val@mail.com",
+      "cpf": "29360039869",
+      "status": "inactive"
     },
     {
       "id": 5,
-      "nome": "Usuário",
-      "sobrenome": "de Souza"
+      "nome": "Usuário de Souza",
+      "password": "698dc19d489c4e4db73e28a713eab07b",
+      "profile": "user",
+      "email": "souza@mail.com",
+      "cpf": "29363839869",
+      "status": "active"
     }
   ],
-  "contacts": [
-    {
+  "contacts": [{
       "id": 1,
       "name": "Valdir Silva",
       "email": "val@mail.com",
@@ -75,8 +93,7 @@
       "id": 7
     }
   ],
-  "emails": [
-    {
+  "emails": [{
       "id": 1,
       "email": "val@mail.com",
       "register": "2019-12-19 00:00:00"
@@ -110,8 +127,7 @@
       "id": 7
     }
   ],
-  "menus": [
-    {
+  "menus": [{
       "id": 1,
       "title": "Hot Roll",
       "description": "Promoção de Hot Roll",
@@ -147,8 +163,7 @@
       "photo": "https://img.cybercook.com.br/imagens/receitas/751/sashimi-de-salmao-623x350.jpg"
     }
   ],
-  "reservations": [
-    {
+  "reservations": [{
       "id": 1,
       "name": "Dr Valdir",
       "email": "val@mail.com",
@@ -205,8 +220,7 @@
       "id": 10
     }
   ],
-  "times": [
-    {
+  "times": [{
       "id": 1,
       "value": "08:00"
     },

@@ -24,7 +24,7 @@ export default class SubscribeForm extends Component {
         email,
       })
       .then(res => {
-        console.log(res.status);
+        // console.log(res.status);
         if (res.status === 201) {
           setTimeout(
             function() {

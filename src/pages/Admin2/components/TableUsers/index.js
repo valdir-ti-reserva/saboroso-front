@@ -74,7 +74,10 @@ export default class TableUsers extends Component {
               <tr>
                 <th width={25}>#</th>
                 <th>NOME</th>
-                <th>SOBRENOME</th>
+                <th>E-MAIL</th>
+                <th>CPF</th>
+                <th>PERFIL</th>
+                <th>STATUS</th>
                 <th width={200}>AÇÕES</th>
               </tr>
             </thead>
@@ -83,7 +86,10 @@ export default class TableUsers extends Component {
                 <tr key={item.id}>
                   <td>{item.id}</td>
                   <td>{item.nome}</td>
-                  <td>{item.sobrenome}</td>
+                  <td>{item.email}</td>
+                  <td>{item.cpf}</td>
+                  <td>{item.profile}</td>
+                  <td>{item.status}</td>
                   <td>
                     <button className="btn-editar btn-warning">
                       <FaPen />

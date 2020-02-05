@@ -61,7 +61,7 @@ export default class ReservationForm extends Component {
         time,
       })
       .then(res => {
-        console.log(res);
+        // console.log(res);
         if (res.status === 201) {
           setTimeout(
             function() {

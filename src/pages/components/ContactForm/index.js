@@ -36,7 +36,7 @@ export default class ContactForm extends Component {
         message,
       })
       .then(res => {
-        console.log(res);
+        // console.log(res);
         if (res.status === 201) {
           setTimeout(
             function() {
