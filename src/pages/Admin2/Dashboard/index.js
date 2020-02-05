@@ -13,7 +13,7 @@ export default class Dashboard extends Component {
         homeRoute="/admin2"
       >
         <Row>
-          <Col xs={6}>
+          <Col xs={12}>
             <Box
               title="My first box"
               type="primary"
@@ -24,7 +24,7 @@ export default class Dashboard extends Component {
               Projeto Saboroso
             </Box>
           </Col>
-          <Col xs={6}>
+          <Col xs={12}>
             <Box title="Another box">Content goes here</Box>
           </Col>
         </Row>
