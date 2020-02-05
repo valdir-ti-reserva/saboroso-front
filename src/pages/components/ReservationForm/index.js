@@ -1,16 +1,19 @@
 import React, { Component } from 'react';
 import api from '../../../services/api';
+import DateTime from 'react-datetime';
 import { Form } from './styles';
 
 export default class ReservationForm extends Component {
   constructor(props) {
     super(props);
+
     this.state = {
       name: '',
       email: '',
       people: '',
       date: '',
       time: '',
+      times: [],
     };
 
     this.handleNameChange = this.handleNameChange.bind(this);
@@ -18,6 +21,11 @@ export default class ReservationForm extends Component {
     this.handlePeopleChange = this.handlePeopleChange.bind(this);
     this.handleDateChange = this.handleDateChange.bind(this);
     this.handleTimeChange = this.handleTimeChange.bind(this);
+  }
+
+  async componentDidMount() {
+    const response = await api.get('times');
+    this.setState({ times: response.data });
   }
 
   handleNameChange = event => {
@@ -33,7 +41,7 @@ export default class ReservationForm extends Component {
   };
 
   handleDateChange = event => {
-    this.setState({ date: event.target.value });
+    this.setState({ date: event._d.toLocaleDateString() });
   };
 
   handleTimeChange = event => {
@@ -42,7 +50,6 @@ export default class ReservationForm extends Component {
 
   handleSubmit = event => {
     event.preventDefault();
-
     const { name, email, people, date, time } = this.state;
 
     api
@@ -73,6 +80,8 @@ export default class ReservationForm extends Component {
   };
 
   render() {
+    // console.log(this.state.times);
+
     return (
       <>
         <Form onSubmit={this.handleSubmit}>
@@ -127,29 +136,34 @@ export default class ReservationForm extends Component {
           <div className="row form-group">
             <div className="col-md-12">
               <label htmlFor="inputDate">Data</label>
-              <input
-                type="text"
-                id="inputDate"
+              <DateTime
+                dateFormat="DD/MM/YYYY"
+                timeFormat={false}
                 name="date"
-                className="form-control"
+                selected={this.state.date}
                 value={this.state.date}
                 onChange={this.handleDateChange}
-                required
               />
             </div>
           </div>
           <div className="row form-group">
             <div className="col-md-12">
               <label htmlFor="inputTime">Hora</label>
-              <input
-                type="text"
+              <select
                 id="inputTime"
                 name="time"
                 className="form-control"
                 value={this.state.time}
                 onChange={this.handleTimeChange}
                 required
-              />
+              >
+                <option value=""> -- Selecione -- </option>
+                {this.state.times.map(t => (
+                  <option key={t.id} value={t.value}>
+                    {t.value}
+                  </option>
+                ))}
+              </select>
             </div>
           </div>
 

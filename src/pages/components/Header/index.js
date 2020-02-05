@@ -53,13 +53,13 @@ export default class Header extends Component {
             style={{ backgroundImage: `url(${this.props.bg})` }}
             data-stellar-background-ratio="0.5"
           >
-            <div class="overlay"></div>
-            <div class="gtco-container">
-              <div class="row">
-                <div class="col-md-12 col-md-offset-0 text-center">
-                  <div class="row row-mt-15em">
+            <div className="overlay"></div>
+            <div className="gtco-container">
+              <div className="row">
+                <div className="col-md-12 col-md-offset-0 text-center">
+                  <div className="row row-mt-15em">
                     <div
-                      class="col-md-12 mt-text animate-box"
+                      className="col-md-12 mt-text animate-box"
                       data-animate-effect="fadeInUp"
                     >
                       <MakeBy msg={this.props.msg} />

@@ -48,7 +48,7 @@ export default class SubscribeForm extends Component {
               <input
                 type="email"
                 className="form-control"
-                autocomplete="off"
+                autoComplete="off"
                 id="email"
                 placeholder="Seu E-mail"
                 name="email"
