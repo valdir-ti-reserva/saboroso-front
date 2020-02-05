@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 // import { Table } from './styles';
 import { confirmAlert } from 'react-confirm-alert';
 import { Table } from '../../../../styles/tables';
-import { FaTrash, FaPen } from 'react-icons/fa';
+import { FaTrash, FaPen, FaPlus } from 'react-icons/fa';
 import api from '../../../../services/api';
 
 export default class TableMenus extends Component {
@@ -65,9 +65,9 @@ export default class TableMenus extends Component {
         <Table className="table-responsive">
           <div className="topo-table">
             <h2>{this.props.title}</h2>
-            {/* <button className="btn-adicionar">
+            <button className="btn-adicionar">
               <FaPlus />
-            </button> */}
+            </button>
           </div>
 
           <table className="table table-bordered table-striped table-hover">

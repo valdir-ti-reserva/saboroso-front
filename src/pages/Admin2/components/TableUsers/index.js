@@ -75,7 +75,7 @@ export default class TableUsers extends Component {
                 <th width={25}>#</th>
                 <th>NOME</th>
                 <th>SOBRENOME</th>
-                <th width={200}>Ações</th>
+                <th width={200}>AÇÕES</th>
               </tr>
             </thead>
             <tbody>
