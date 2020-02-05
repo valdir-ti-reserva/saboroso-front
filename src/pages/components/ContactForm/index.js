@@ -67,6 +67,7 @@ export default class ContactForm extends Component {
                 name="name"
                 value={this.state.name}
                 onChange={this.handleNameChange}
+                required
               />
             </div>
           </div>
@@ -84,6 +85,7 @@ export default class ContactForm extends Component {
                 name="email"
                 value={this.state.email}
                 onChange={this.handleEmailChange}
+                required
               />
             </div>
           </div>
@@ -101,6 +103,7 @@ export default class ContactForm extends Component {
                 placeholder="Escreve alguma coisa"
                 value={this.state.message}
                 onChange={this.handleMsgChange}
+                required
               ></textarea>
             </div>
           </div>
