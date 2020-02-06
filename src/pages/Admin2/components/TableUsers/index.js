@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { confirmAlert } from 'react-confirm-alert';
+import ModalAddUser from './modalAddUsers';
 import 'react-confirm-alert/src/react-confirm-alert.css';
 import { Table } from '../../../../styles/tables';
 import { FaTrash, FaPlus, FaPen } from 'react-icons/fa';
@@ -105,6 +106,7 @@ export default class TableUsers extends Component {
               ))}
             </tbody>
           </table>
+          <ModalAddUser />
         </Table>
       </>
     );
