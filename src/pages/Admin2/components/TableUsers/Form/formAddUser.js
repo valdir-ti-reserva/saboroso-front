@@ -34,7 +34,7 @@ export default class FormAddUser extends Component {
   handleChangeCpf = e => {
     this.setState({ cpf: e.target.value });
   };
-  
+
   handleChangePassword = e => {
     this.setState({ password: e.target.value });
   };
@@ -63,7 +63,6 @@ export default class FormAddUser extends Component {
       })
       .then(res => {
         if (res.status === 201) {
-          
           setTimeout(
             function() {
               this.setState({
@@ -90,7 +89,7 @@ export default class FormAddUser extends Component {
               name="nome"
               type="text"
               autoComplete="off"
-              placeholder="Digite o nome do usuário"
+              placeholder="Nome do usuário"
               onChange={this.handleChangeName}
             />
           </Form.Group>
@@ -105,12 +104,12 @@ export default class FormAddUser extends Component {
             />
           </Form.Group>
           <Form.Group controlId="exampleForm.ControlInput3">
-            <Form.Label>Email</Form.Label>
+            <Form.Label>Senha</Form.Label>
             <Form.Control
               name="password"
               type="password"
               autoComplete="off"
-              placeholder="Senha"
+              placeholder="******"
               onChange={this.handleChangePassword}
             />
           </Form.Group>
@@ -119,7 +118,7 @@ export default class FormAddUser extends Component {
             <Form.Control
               type="text"
               autoComplete="off"
-              placeholder="CPF"
+              placeholder="000.000.000-00"
               onChange={this.handleChangeCpf}
             />
           </Form.Group>
