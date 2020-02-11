@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom';
 
 import Main from './pages/Main';
 import Menus from './pages/Menus';
@@ -20,6 +20,7 @@ export default function Routes() {
         <Route path="/reservations" component={Reservations} />
         <Route path="/admin2" component={MainAdmin} />
         <Route path="/admin" component={AdminMBD} />
+        <Redirect from="*" to="/" />
       </Switch>
     </BrowserRouter>
   );
