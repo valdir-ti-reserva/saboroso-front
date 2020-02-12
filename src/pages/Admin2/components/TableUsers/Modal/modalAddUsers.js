@@ -3,8 +3,9 @@ import { Button, Modal } from 'react-bootstrap';
 import { BtnAdd } from './styles';
 import { FaPlus } from 'react-icons/fa';
 import FormAddUser from '../Form/formAddUser';
+import { connect } from 'react-redux';
 
-export default class modalAddUsers extends React.Component {
+class modalAddUsers extends React.Component {
   constructor(props, context) {
     super(props, context);
 
@@ -17,7 +18,6 @@ export default class modalAddUsers extends React.Component {
   }
 
   handleClose = e => {
-    console.log(e);
     this.setState({ show: false });
   };
 
@@ -29,12 +29,7 @@ export default class modalAddUsers extends React.Component {
     return (
       <>
         <BtnAdd>
-          <Button
-            className="btn-adicionar"
-            // bsStyle="primary"
-            // bsSize="large"
-            onClick={this.handleShow}
-          >
+          <Button className="btn-adicionar" onClick={this.handleShow}>
             <FaPlus />
           </Button>
         </BtnAdd>
@@ -61,3 +56,9 @@ export default class modalAddUsers extends React.Component {
     );
   }
 }
+
+const mapStateToProps = state => ({
+  user: state.user,
+});
+
+export default connect(mapStateToProps)(modalAddUsers);

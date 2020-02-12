@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 import { confirmAlert } from 'react-confirm-alert';
 import ModalAddUser from './Modal/modalAddUsers';
 import 'react-confirm-alert/src/react-confirm-alert.css';
@@ -6,7 +7,9 @@ import { Table } from '../../../../styles/tables';
 import { FaTrash, FaPen } from 'react-icons/fa';
 import api from '../../../../services/api';
 
-export default class TableUsers extends Component {
+import store from '../../../../store/index';
+
+class TableUsers extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -15,24 +18,46 @@ export default class TableUsers extends Component {
     };
   }
 
+  componentWillUpdate() {
+    const items = this.props.user[0] ? this.props.user[0] : [];
+    if (store.getState().user.length > items.length) {
+      this.setState({ items: store.getState().user, render: true });
+    }
+  }
+
   async componentDidMount() {
+    const { dispatch } = this.props;
     const response = await api.get('users');
+
+    dispatch({
+      type: 'LIST_USER',
+      user: response.data,
+    });
 
     setTimeout(
       function() {
-        this.setState({ items: response.data, render: true });
+        this.setState({ items: this.props.user[0], render: true });
       }.bind(this),
       100
     );
   }
 
   async delete(id) {
+    const { dispatch } = this.props;
+
     const response = await api.delete('users/' + id);
+
     if (response.statusText === 'OK') {
       const items = this.state.items.filter(item => item.id !== id);
+
       setTimeout(
         function() {
-          this.setState({ items: items, render: true });
+          dispatch({
+            type: 'REMOVE_USER',
+            user: items,
+          });
+
+          this.setState({ items: this.props.user[0], render: true });
         }.bind(this),
         750
       );
@@ -59,7 +84,10 @@ export default class TableUsers extends Component {
   }
 
   render() {
+    // console.log(this);
+
     const { items } = this.state;
+
     return (
       <>
         <ModalAddUser />
@@ -67,9 +95,6 @@ export default class TableUsers extends Component {
         <Table className="table-responsive">
           <div className="topo-table">
             <h2>{this.props.title}</h2>
-            {/* <button className="btn-adicionar">
-              <FaPlus />
-            </button> */}
           </div>
 
           <table className="table table-bordered table-striped table-hover">
@@ -113,3 +138,5 @@ export default class TableUsers extends Component {
     );
   }
 }
+
+export default connect(state => ({ user: state.user }))(TableUsers);

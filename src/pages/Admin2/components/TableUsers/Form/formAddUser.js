@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 import { Form, Button } from 'react-bootstrap';
 import api from '../../../../../services/api';
+import { BtnAdd } from './styles';
 
-export default class FormAddUser extends Component {
+class FormAddUser extends Component {
   constructor(props) {
     super(props);
 
@@ -49,28 +51,35 @@ export default class FormAddUser extends Component {
 
   handleSubmit = e => {
     e.preventDefault();
-
-    const { nome, email, cpf, password, profile, status } = this.state;
+    const { dispatch } = this.props;
+    const { nome, password, profile, email, cpf, status } = this.state;
 
     api
       .post('users', {
         nome,
-        email,
-        cpf,
         password,
         profile,
+        email,
+        cpf,
         status,
       })
       .then(res => {
         if (res.status === 201) {
+          console.log(this);
           setTimeout(
             function() {
               this.setState({
                 nome: '',
+                password: '',
+                profile: '',
                 email: '',
                 cpf: '',
-                profile: '',
                 status: '',
+              });
+
+              dispatch({
+                type: 'ADD_USER',
+                user: res.data,
               });
             }.bind(this),
             1000
@@ -138,11 +147,21 @@ export default class FormAddUser extends Component {
               <option>inactive</option>
             </Form.Control>
           </Form.Group>
-          <Button type="submit" onClick={this.handleSubmit}>
-            Salvar
-          </Button>
+          <BtnAdd>
+            <Form.Group className="btn-add">
+              <Button type="submit" onClick={this.handleSubmit}>
+                Salvar
+              </Button>
+            </Form.Group>
+          </BtnAdd>
         </Form>
       </>
     );
   }
 }
+
+const mapStateToProps = state => ({
+  user: state.user,
+});
+
+export default connect(mapStateToProps)(FormAddUser);
