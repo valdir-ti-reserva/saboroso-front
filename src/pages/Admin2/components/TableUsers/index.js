@@ -7,8 +7,6 @@ import { Table } from '../../../../styles/tables';
 import { FaTrash, FaPen } from 'react-icons/fa';
 import api from '../../../../services/api';
 
-import store from '../../../../store/index';
-
 class TableUsers extends Component {
   constructor(props) {
     super(props);
@@ -18,10 +16,9 @@ class TableUsers extends Component {
     };
   }
 
-  componentWillUpdate() {
-    const items = this.props.user[0] ? this.props.user[0] : [];
-    if (store.getState().user.length > items.length) {
-      this.setState({ items: store.getState().user, render: true });
+  componentDidUpdate() {
+    if (this.props.userT.length > this.state.items.length) {
+      this.setState({ items: this.props.userT });
     }
   }
 
@@ -36,7 +33,7 @@ class TableUsers extends Component {
 
     setTimeout(
       function() {
-        this.setState({ items: this.props.user[0], render: true });
+        this.setState({ items: response.data, render: true });
       }.bind(this),
       100
     );
@@ -56,8 +53,7 @@ class TableUsers extends Component {
             type: 'REMOVE_USER',
             user: items,
           });
-
-          this.setState({ items: this.props.user[0], render: true });
+          this.setState({ items: this.props.userT, render: true });
         }.bind(this),
         750
       );
@@ -84,8 +80,6 @@ class TableUsers extends Component {
   }
 
   render() {
-    // console.log(this);
-
     const { items } = this.state;
 
     return (
@@ -139,4 +133,4 @@ class TableUsers extends Component {
   }
 }
 
-export default connect(state => ({ user: state.user }))(TableUsers);
+export default connect(state => ({ userT: state.user }))(TableUsers);

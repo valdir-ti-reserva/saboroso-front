@@ -66,24 +66,12 @@ class FormAddUser extends Component {
       })
       .then(res => {
         if (res.status === 201) {
-          setTimeout(
-            function() {
-              // this.setState({
-              //   nome: '',
-              //   password: '',
-              //   profile: '',
-              //   email: '',
-              //   cpf: '',
-              //   status: '',
-              // });
-
-              dispatch({
-                type: 'ADD_USER',
-                user: res.data,
-              });
-            }.bind(this),
-            500
-          );
+          setTimeout(function() {
+            dispatch({
+              type: 'ADD_USER',
+              user: res.data,
+            });
+          }, 500);
 
           this.props.close();
         }

@@ -1,11 +1,11 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { Button, Modal } from 'react-bootstrap';
 import { BtnAdd } from './styles';
 import { FaPlus } from 'react-icons/fa';
 import FormAddUser from '../Form/formAddUser';
 import { connect } from 'react-redux';
 
-class modalAddUsers extends React.Component {
+class modalAddUsers extends Component {
   constructor(props) {
     super(props);
 
@@ -57,8 +57,4 @@ class modalAddUsers extends React.Component {
   }
 }
 
-const mapStateToProps = state => ({
-  user: state.user,
-});
-
-export default connect(mapStateToProps)(modalAddUsers);
+export default connect()(modalAddUsers);
