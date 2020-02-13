@@ -51,6 +51,7 @@ class FormAddUser extends Component {
 
   handleSubmit = e => {
     e.preventDefault();
+
     const { dispatch } = this.props;
     const { nome, password, profile, email, cpf, status } = this.state;
 
@@ -65,25 +66,26 @@ class FormAddUser extends Component {
       })
       .then(res => {
         if (res.status === 201) {
-          console.log(this);
           setTimeout(
             function() {
-              this.setState({
-                nome: '',
-                password: '',
-                profile: '',
-                email: '',
-                cpf: '',
-                status: '',
-              });
+              // this.setState({
+              //   nome: '',
+              //   password: '',
+              //   profile: '',
+              //   email: '',
+              //   cpf: '',
+              //   status: '',
+              // });
 
               dispatch({
                 type: 'ADD_USER',
                 user: res.data,
               });
             }.bind(this),
-            1000
+            500
           );
+
+          this.props.close();
         }
       });
   };

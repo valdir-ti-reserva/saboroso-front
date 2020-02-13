@@ -6,8 +6,8 @@ import FormAddUser from '../Form/formAddUser';
 import { connect } from 'react-redux';
 
 class modalAddUsers extends React.Component {
-  constructor(props, context) {
-    super(props, context);
+  constructor(props) {
+    super(props);
 
     this.handleShow = this.handleShow.bind(this);
     this.handleClose = this.handleClose.bind(this);
@@ -43,7 +43,7 @@ class modalAddUsers extends React.Component {
             <Modal.Title>Adicionar Usuário</Modal.Title>
           </Modal.Header>
           <Modal.Body>
-            <FormAddUser />
+            <FormAddUser close={this.handleClose} />
           </Modal.Body>
           <Modal.Footer>
             {/* <Button variant="primary" onClick={this.handleClose}>
