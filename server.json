@@ -26,33 +26,6 @@
       "email": "lila@mail.com",
       "cpf": "28863839869",
       "status": "active"
-    },
-    {
-      "id": 4,
-      "nome": "Valdir Souza",
-      "password": "698dc19d489c4e4db73e28a713eab07b",
-      "profile": "user",
-      "email": "val@mail.com",
-      "cpf": "29360039869",
-      "status": "inactive"
-    },
-    {
-      "id": 5,
-      "nome": "Usuário de Souza",
-      "password": "698dc19d489c4e4db73e28a713eab07b",
-      "profile": "user",
-      "email": "souza@mail.com",
-      "cpf": "29363839869",
-      "status": "active"
-    },
-    {
-      "nome": "VALDIR S DA SILVA",
-      "email": "valdir.ti@gmail.com",
-      "cpf": "29363839855",
-      "password": "123456",
-      "profile": "user",
-      "status": "active",
-      "id": 6
     }
   ],
   "contacts": [
