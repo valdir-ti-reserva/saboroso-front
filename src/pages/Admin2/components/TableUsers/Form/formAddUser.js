@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
+import * as UserActions from '../../../../../store/modules/user/actions';
 import { Form, Button } from 'react-bootstrap';
 import api from '../../../../../services/api';
 import { BtnAdd } from './styles';
@@ -52,7 +54,7 @@ class FormAddUser extends Component {
   handleSubmit = e => {
     e.preventDefault();
 
-    const { dispatch } = this.props;
+    const { addUser } = this.props;
     const { nome, password, profile, email, cpf, status } = this.state;
 
     api
@@ -67,10 +69,7 @@ class FormAddUser extends Component {
       .then(res => {
         if (res.status === 201) {
           setTimeout(function() {
-            dispatch({
-              type: 'ADD_USER',
-              user: res.data,
-            });
+            addUser(res.data);
           }, 500);
 
           this.props.close();
@@ -154,4 +153,7 @@ const mapStateToProps = state => ({
   user: state.user,
 });
 
-export default connect(mapStateToProps)(FormAddUser);
+const mapDispatchToProps = dispatch =>
+  bindActionCreators(UserActions, dispatch);
+
+export default connect(mapStateToProps, mapDispatchToProps)(FormAddUser);

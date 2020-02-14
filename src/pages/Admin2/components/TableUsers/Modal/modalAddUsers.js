@@ -45,12 +45,7 @@ class modalAddUsers extends Component {
           <Modal.Body>
             <FormAddUser close={this.handleClose} />
           </Modal.Body>
-          <Modal.Footer>
-            {/* <Button variant="primary" onClick={this.handleClose}>
-              Salvar
-            </Button> */}
-            {/* <Button onClick={this.handleSave}>Salvar</Button> */}
-          </Modal.Footer>
+          <Modal.Footer></Modal.Footer>
         </Modal>
       </>
     );

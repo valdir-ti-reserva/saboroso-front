@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
+import * as UserActions from '../../../../store/modules/user/actions';
 import { confirmAlert } from 'react-confirm-alert';
 import ModalAddUser from './Modal/modalAddUsers';
 import 'react-confirm-alert/src/react-confirm-alert.css';
@@ -23,13 +25,10 @@ class TableUsers extends Component {
   }
 
   async componentDidMount() {
-    const { dispatch } = this.props;
+    const { listUser } = this.props;
     const response = await api.get('users');
 
-    dispatch({
-      type: 'LIST_USER',
-      user: response.data,
-    });
+    listUser(response.data);
 
     setTimeout(
       function() {
@@ -40,17 +39,15 @@ class TableUsers extends Component {
   }
 
   async delete(id) {
-    const { dispatch } = this.props;
+    const { removeUser } = this.props;
 
     const response = await api.delete('users/' + id);
 
     if (response.statusText === 'OK') {
       setTimeout(
         function() {
-          dispatch({
-            type: 'REMOVE_USER',
-            id,
-          });
+          removeUser(id);
+
           this.setState({ items: this.props.userT, render: true });
         }.bind(this),
         750
@@ -131,4 +128,11 @@ class TableUsers extends Component {
   }
 }
 
-export default connect(state => ({ userT: state.user }))(TableUsers);
+const mapStateToProps = state => ({
+  userT: state.user,
+});
+
+const mapDispatchToProps = dispatch =>
+  bindActionCreators(UserActions, dispatch);
+
+export default connect(mapStateToProps, mapDispatchToProps)(TableUsers);
