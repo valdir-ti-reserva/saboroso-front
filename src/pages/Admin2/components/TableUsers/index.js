@@ -33,7 +33,7 @@ class TableUsers extends Component {
 
     setTimeout(
       function() {
-        this.setState({ items: response.data, render: true });
+        this.setState({ items: this.props.userT, render: true });
       }.bind(this),
       100
     );
@@ -45,13 +45,11 @@ class TableUsers extends Component {
     const response = await api.delete('users/' + id);
 
     if (response.statusText === 'OK') {
-      const items = this.state.items.filter(item => item.id !== id);
-
       setTimeout(
         function() {
           dispatch({
             type: 'REMOVE_USER',
-            user: items,
+            id,
           });
           this.setState({ items: this.props.userT, render: true });
         }.bind(this),
