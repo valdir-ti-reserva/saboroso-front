@@ -10,15 +10,6 @@
       "status": "active"
     },
     {
-      "id": 2,
-      "nome": "Julia Felix",
-      "password": "698dc19d489c4e4db73e28a713eab07b",
-      "profile": "user",
-      "email": "julia@mail.com",
-      "cpf": "29363839800",
-      "status": "active"
-    },
-    {
       "id": 3,
       "nome": "Lila Felix",
       "password": "698dc19d489c4e4db73e28a713eab07b",
@@ -26,6 +17,15 @@
       "email": "lila@mail.com",
       "cpf": "28863839869",
       "status": "active"
+    },
+    {
+      "nome": "Julia Felix",
+      "password": "111111",
+      "profile": "user",
+      "email": "julia@gmail.com",
+      "cpf": "11111122233",
+      "status": "active",
+      "id": 4
     }
   ],
   "contacts": [
@@ -126,20 +126,6 @@
       "description": "Delicioso Sashimi",
       "price": "31.00",
       "photo": "https://img.cybercook.com.br/imagens/receitas/751/sashimi-de-salmao-623x350.jpg"
-    },
-    {
-      "id": 3,
-      "title": "Temaki Grelhado",
-      "description": "Nov Temaki Grelhado",
-      "price": "19.90",
-      "photo": "https://www.saboresajinomoto.com.br/uploads/images/recipes/temaki-de-salmao.jpg"
-    },
-    {
-      "id": 4,
-      "title": "Temaki Grelhado",
-      "description": "Nov Temaki Grelhado",
-      "price": "19.90",
-      "photo": "https://www.saboresajinomoto.com.br/uploads/images/recipes/temaki-de-salmao.jpg"
     },
     {
       "id": 5,
