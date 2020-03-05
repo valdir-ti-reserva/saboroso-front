@@ -13,7 +13,7 @@ import Footer from '../components/Footer';
 import ScrollUpButton from 'react-scroll-up-button';
 
 //Props
-import bg from '../../images/img_bg_1.jpg';
+import bg from '~/images/img_bg_1.jpg';
 const msg = 'Restaurante Saboroso!';
 
 export default function Main() {

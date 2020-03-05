@@ -11,7 +11,7 @@ import ContactForm from '../components/ContactForm';
 import Header from '../components/Header';
 
 // Itens
-import bg from '../../images/img_bg_3.jpg';
+import bg from '~/images/img_bg_3.jpg';
 const msg = 'Diga um oi!';
 
 export default function Contacts() {

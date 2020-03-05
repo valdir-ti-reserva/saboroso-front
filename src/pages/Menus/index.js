@@ -11,7 +11,7 @@ import Subscribe from '../components/Subscribe';
 import ScrollUpButton from 'react-scroll-up-button';
 
 // Itens
-import bg from '../../images/img_bg_1.jpg';
+import bg from '~/images/img_bg_1.jpg';
 const msg = 'Saboreie o nosso menu!';
 
 export default function Menus() {

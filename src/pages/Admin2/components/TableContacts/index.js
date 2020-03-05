@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 // import { Table } from './styles';
 import { confirmAlert } from 'react-confirm-alert';
-import { Table } from '../../../../styles/tables';
+import { Table } from '~/styles/tables';
 import { FaTrash, FaPen } from 'react-icons/fa';
-import api from '../../../../services/api';
+import api from '~/services/api';
 
 export default class TableContacts extends Component {
   constructor(props) {

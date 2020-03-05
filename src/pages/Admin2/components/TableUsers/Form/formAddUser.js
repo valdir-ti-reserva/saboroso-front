@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import * as UserActions from '../../../../../store/modules/user/actions';
+import * as UserActions from '~/store/modules/user/actions';
 import { Form, Button } from 'react-bootstrap';
-import api from '../../../../../services/api';
+import api from '~/services/api';
 import { BtnAdd } from './styles';
 
 class FormAddUser extends Component {

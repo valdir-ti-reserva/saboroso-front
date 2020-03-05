@@ -10,7 +10,7 @@ import ScrollUpButton from 'react-scroll-up-button';
 import Header from '../components/Header';
 
 // Props
-import bg from '../../images/img_bg_2.jpg';
+import bg from '~/images/img_bg_2.jpg';
 const msg = 'Reserve uma mesa!';
 
 export default function Reservations() {

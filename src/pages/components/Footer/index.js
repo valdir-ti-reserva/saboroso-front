@@ -2,7 +2,7 @@ import React from 'react';
 
 import { FaLinkedinIn, FaTwitter, FaFacebook, FaYoutube } from 'react-icons/fa';
 
-import Background from '../../../images/img_bg_1.jpg';
+import Background from '~/images/img_bg_1.jpg';
 
 export default function Footer() {
   return (

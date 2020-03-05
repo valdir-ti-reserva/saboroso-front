@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import api from '../../../services/api';
+import api from '~/services/api';
 import DateTime from 'react-datetime';
 import { Form } from './styles';
 

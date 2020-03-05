@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import api from '../../../services/api';
-import { formatPrice } from '../../../util/format';
+import api from '~/services/api';
+import { formatPrice } from '~/util/format';
 import { FaPlus } from 'react-icons/fa';
 
 const iconStyle = {

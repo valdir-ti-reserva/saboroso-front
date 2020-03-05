@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import * as UserActions from '../../../../store/modules/user/actions';
+import * as UserActions from '~/store/modules/user/actions';
 import { confirmAlert } from 'react-confirm-alert';
 import ModalAddUser from './Modal/modalAddUsers';
 import 'react-confirm-alert/src/react-confirm-alert.css';
-import { Table } from '../../../../styles/tables';
+import { Table } from '~/styles/tables';
 import { FaTrash, FaPen } from 'react-icons/fa';
-import api from '../../../../services/api';
+import api from '~/services/api';
 
 class TableUsers extends Component {
   constructor(props) {

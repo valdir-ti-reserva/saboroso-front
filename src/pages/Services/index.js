@@ -11,7 +11,7 @@ import ScrollUpButton from 'react-scroll-up-button';
 import Header from '../components/Header';
 
 // Props
-import bg from '../../images/img_bg_1.jpg';
+import bg from '~/images/img_bg_1.jpg';
 const msg = 'É um prazer poder servir!';
 
 export default function Services() {
