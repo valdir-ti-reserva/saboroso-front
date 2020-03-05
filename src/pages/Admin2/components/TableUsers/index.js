@@ -3,7 +3,8 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import * as UserActions from '~/store/modules/user/actions';
 import { confirmAlert } from 'react-confirm-alert';
-import ModalAddUser from './Modal/modalAddUsers';
+import ModalUser from './Modal/modalUser';
+// import ModalAddUser from './Modal/modalAddUsers';
 import 'react-confirm-alert/src/react-confirm-alert.css';
 import { Table } from '~/styles/tables';
 import { FaTrash, FaPen } from 'react-icons/fa';
@@ -79,7 +80,8 @@ class TableUsers extends Component {
 
     return (
       <>
-        <ModalAddUser />
+        <ModalUser />
+        {/* <ModalAddUser /> */}
         <br />
         <Table className="table-responsive">
           <div className="topo-table">

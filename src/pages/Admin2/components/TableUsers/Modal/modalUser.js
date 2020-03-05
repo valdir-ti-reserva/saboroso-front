@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import { Button, Modal } from 'react-bootstrap';
 import { BtnAdd } from './styles';
 import { FaPlus } from 'react-icons/fa';
-import FormAddUser from '../Form/formAddUser';
+import FormUser from '../Form/formUser';
+// import FormAddUser from '../Form/formAddUser';
 import { connect } from 'react-redux';
 
 class modalAddUsers extends Component {
@@ -43,7 +44,8 @@ class modalAddUsers extends Component {
             <Modal.Title>Adicionar Usuário</Modal.Title>
           </Modal.Header>
           <Modal.Body>
-            <FormAddUser close={this.handleClose} />
+            <FormUser close={this.handleClose} />
+            {/* <FormAddUser close={this.handleClose} /> */}
           </Modal.Body>
           <Modal.Footer></Modal.Footer>
         </Modal>
