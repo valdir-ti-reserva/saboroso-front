@@ -1,11 +1,15 @@
 import React, { Component } from 'react';
-// import { Table } from './styles';
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
+import * as MenuActions from '~/store/modules/menu/actions';
 import { confirmAlert } from 'react-confirm-alert';
+import ModalMenu from './Modal/modalMenu';
+import 'react-confirm-alert/src/react-confirm-alert.css';
 import { Table } from '~/styles/tables';
-import { FaTrash, FaPen, FaPlus } from 'react-icons/fa';
+import { FaTrash, FaPen } from 'react-icons/fa';
 import api from '~/services/api';
 
-export default class TableMenus extends Component {
+class TableMenus extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -14,24 +18,37 @@ export default class TableMenus extends Component {
     };
   }
 
+  componentDidUpdate() {
+    if (this.props.menuT.length > this.state.items.length) {
+      this.setState({ items: this.props.menuT });
+    }
+  }
+
   async componentDidMount() {
+    const { listMenu } = this.props;
     const response = await api.get('menus');
+
+    listMenu(response.data);
     setTimeout(
       function() {
-        this.setState({ items: response.data, render: true });
+        this.setState({ items: this.props.menuT, render: true });
       }.bind(this),
       100
     );
   }
 
   async delete(id) {
+    const { removeMenu } = this.props;
+
     const response = await api.delete('menus/' + id);
 
     if (response.statusText === 'OK') {
-      const items = this.state.items.filter(item => item.id !== id);
+      // const items = this.state.items.filter(item => item.id !== id);
       setTimeout(
         function() {
-          this.setState({ items: items, render: true });
+          removeMenu(id);
+
+          this.setState({ items: this.props.menuT, render: true });
         }.bind(this),
         750
       );
@@ -60,14 +77,14 @@ export default class TableMenus extends Component {
   render() {
     const { items } = this.state;
 
+    console.log('State: ', this.state);
+
     return (
       <>
+        <ModalMenu />
         <Table className="table-responsive">
           <div className="topo-table">
             <h2>{this.props.title}</h2>
-            <button className="btn-adicionar">
-              <FaPlus />
-            </button>
           </div>
 
           <table className="table table-bordered table-striped table-hover">
@@ -111,3 +128,12 @@ export default class TableMenus extends Component {
     );
   }
 }
+
+const mapStateToProps = state => ({
+  menuT: state.menu,
+});
+
+const mapDispatchToProps = dispatch =>
+  bindActionCreators(MenuActions, dispatch);
+
+export default connect(mapStateToProps, mapDispatchToProps)(TableMenus);

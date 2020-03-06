@@ -2,10 +2,11 @@ import React, { Component } from 'react';
 import { Button, Modal } from 'react-bootstrap';
 import { BtnAdd } from './styles';
 import { FaPlus } from 'react-icons/fa';
-import FormAddUser from '../Form/formAddUser';
+import FormMenu from '../Form/formMenu';
+// import FormAddUser from '../Form/formAddUser';
 import { connect } from 'react-redux';
 
-class modalAddUsers extends Component {
+class modalMenu extends Component {
   constructor(props) {
     super(props);
 
@@ -40,10 +41,11 @@ class modalAddUsers extends Component {
           style={{ opacity: 1, paddingTop: '12%' }}
         >
           <Modal.Header closeButton>
-            <Modal.Title>Adicionar Usuário</Modal.Title>
+            <Modal.Title>Adicionar Menu</Modal.Title>
           </Modal.Header>
           <Modal.Body>
-            <FormAddUser close={this.handleClose} />
+            <FormMenu close={this.handleClose} />
+            {/* <FormAddUser close={this.handleClose} /> */}
           </Modal.Body>
           <Modal.Footer></Modal.Footer>
         </Modal>
@@ -52,4 +54,4 @@ class modalAddUsers extends Component {
   }
 }
 
-export default connect()(modalAddUsers);
+export default connect()(modalMenu);
