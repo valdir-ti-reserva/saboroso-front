@@ -11,7 +11,7 @@
     "bootstrap": "3",
     "eslint-loader": "^3.0.3",
     "immer": "^5.3.6",
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.0",
     "mdbreact": "^4.25.0",
     "moment": "^2.24.0",
     "react": "^16.12.0",
